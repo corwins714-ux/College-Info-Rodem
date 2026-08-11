@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course of Action</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../sites.css">
+  <style>
+    main { padding:20px 28px; max-width:900px; margin:0 auto }
+    .block { margin:1.5rem 0; padding:1rem; border:1px solid #ccc; border-radius:6px; background:#f9f9f9 }
+    .inputs { margin-top:1rem }
+    .inputs label { display:block; margin-top:.5rem; font-weight:bold }
+    textarea,input { width:100%; margin-top:.25rem; padding:.5rem }
+    .actions { margin-top:1rem }
+    .actions button { padding:.6rem 1rem; border:1px solid #ccc; border-radius:6px; background:#eee; cursor:pointer }
+    .actions button:hover { background:#ddd }
+    .results { margin-top:1rem; display:none }
+    @media (max-width:768px){
+      main{padding:16px;max-width:100%;margin:0}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Air Power</h1>
+ <!-- Hamburger trigger -->
+<nav class="hamburger-nav">
+  <a href="#menu" class="menu-icon">&#9776;</a>
+</nav>
+</header>
+
+<!-- Overlay Menu -->
+<nav id="menu">
+  <div class="inner">
+    <h2>Menu</h2>
+    <ul class="links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/youth/COAs.html">COA Scenarios</a></li>
+      <li><a href="/youth/Assessment.html">Assessment</a></li>
+      <li><a href="/youth/Learning and Thinking.html">Learning & Thinking</a></li>
+      <li><a href="/youth/Scenario Questions.html">Scenario Questions</a></li>
+    </ul>
+    <a href="#" class="close">Close</a>
+  </div>
+</nav>
+
+
+<main>
+  <h2>What would you do if …</h2>
+
+  <!-- Scenario 1: Nalu & Nicki -->
+  <section id="scenario1" class="block">
+    <h3>Scenario 1</h3>
+    <p>Nalu, the most popular junior at your school, broke up with his senior girlfriend mid‑basketball season. A few weeks later, he started dating Nicki, a Filipina sophomore considered one of the prettiest girls in school. He showered her with attention, asked her to prom, and she was thrilled to say yes.</p>
+    <p>Three weeks before prom, while hanging out with his friends, Nalu bragged about a cruel plan: after prom he wants to take Nicki to a hotel room, pressure her into being intimate, secretly record it, and then humiliate her by telling her “He just wanted to hit it.” He even talked about showing the video to friends later and making sure she’s embarrassed at school.</p>
+     <!-- Blank line before questions -->
+    <br>
+    <p><strong>For the girls:</strong> A trusted male friend told you everything, but he’s too scared to speak up. You’ve also heard that Nicki’s best friends are pressuring her to “go for it” so she doesn’t lose Nalu.</p>
+     <!-- Blank line before questions -->
+    <br>
+    <p><strong>For the guys:</strong> You were at the party when Nalu revealed his plan.</p>
+
+    <div class="inputs">
+      <label for="teamName1">Team/Name</label>
+      <input type="text" id="teamName1" maxlength="50" placeholder="Enter your name or team name">
+      <p class="char-hint">Enter up to 200 characters per COA.</p>
+      <label for="coa1a">CoA 1</label>
+      <textarea id="coa1a" maxlength="200" rows="3"></textarea>
+      <label for="coa1b">CoA 2</label>
+      <textarea id="coa1b" maxlength="200" rows="3"></textarea>
+      <label for="coa1c">CoA 3</label>
+      <textarea id="coa1c" maxlength="200" rows="3"></textarea>
+    </div>
+    <div class="actions"><button type="button" onclick="submitCOAs1()">Submit COAs</button></div>
+    <div id="results1" class="results"><h3>Submitted Responses</h3><p id="resName1"></p><ul id="resList1"></ul></div>
+  </section>
+
+  <!-- Scenario 2: Exam cheating -->
+  <section id="scenario2" class="block">
+    <h3>Scenario 2</h3>
+    <p>A tight group of Japanese students from wealthy families have been stealing answer sheets for major exams. They sell the answers to classmates for cash, and everyone knows they’re making serious money.</p>
+    <p>Some teachers and administrators strongly suspect what’s happening, but they look the other way because the students’ parents are powerful and influential. The cheaters keep their grades high, their reputations polished, and their social status untouchable.</p>
+     <!-- Blank line before questions -->
+    <br>
+    <p><strong>For the girls:</strong> A friend confides in you that she bought answers and now feels trapped—if she speaks up, she’ll be exposed too.</p>
+    <!-- Blank line before questions -->
+    <br>
+    <p><strong>For the guys:</strong> You’ve been offered the chance to buy answers before finals.</p>
+    <p><em>What would you do?</em></p>
+
+    <div class="inputs">
+      <label for="teamName2">Team/Name</label>
+      <input type="text" id="teamName2" maxlength="50">
+      <p class="char-hint">Enter up to 200 characters per COA.</p>
+      <label for="coa2a">CoA 1</label>
+      <textarea id="coa2a" maxlength="200" rows="3"></textarea>
+      <label for="coa2b">CoA 2</label>
+      <textarea id="coa2b" maxlength="200" rows="3"></textarea>
+      <label for="coa2c">CoA 3</label>
+      <textarea id="coa2c" maxlength="200" rows="3"></textarea>
+    </div>
+    <div class="actions"><button type="button" onclick="submitCOAs2()">Submit COAs</button></div>
+    <div id="results2" class="results"><h3>Submitted Responses</h3><p id="resName2"></p><ul id="resList2"></ul></div>
+  </section>
+
+  <!-- Scenario 3: Soccer captain coercion -->
+  <section id="scenario3" class="block">
+    <h3>Scenario 3</h3>
+    <p>A junior boy from the youth group started bringing a new friend to Friday nights and events. The new guy was Kapolei High’s varsity soccer captain, a kid who looked like he’d walked straight out of a magazine ad and knew exactly the effect he had on people.</p>
+    <p>Later it became clear: while chasing the attention of one of the most popular girls, he was also quietly preying on a more insecure girl, coercing her to get very physical. When she asked to make it official he told her, “You’re not girlfriend material,” cruel words meant to keep her in her place while he kept using her.</p>
+     <!-- Blank line before questions -->
+    <br>
+    <p><strong>For the girls and boys:</strong> She confided what was happening to her sister in what she thought was a private conversation at church, but you and a friend overheard.</p>
+    <p><em>What would you do?</em></p>
+  </section>
+
+  <!-- Scenario 4: Thought-recording tech -->
+  <section id="scenario4" class="block">
+    <h3>Scenario 4</h3>
+    <p>Engineers developed an application that can capture and record people’s internal thoughts (conversation/monologue - audio) and the visuals of the imagination (daydreams/fantasy - video) and produce movie files of the secret thought lives of anyone; and hackers have stolen this technology.</p>
+    <p>A hacker phones and informs you that they’ve recorded your mind for the past two weeks; and provided you a sample video that was perfect. They said they want money, or they will release your data to select individuals. You agree to meet and discuss terms and conditions.</p>
+    <p>The hacker you meet is actually very polite and considerate. The first term the hacker offers is to let you choose one person that under no circumstances will they ever give your data to. A second term is that they are going to provide your Youth Worker a copy. However, the hacker agrees to let you delete all items from the copy they will send me that you would prefer I not see, for a price.</p>
+
+    <!-- Blank line before questions -->
+    <br>
+
+    <p><strong>For the girls and boys:</strong> Who is the one person you would select that they would never send a copy to -- and why?</p>
+    <p>Is there a person, or people that you would like to receive a copy so that they could actually experience how you truly think of and feel about them? If so, who & why?</p>
+    <p>How much would you pay for them to only send me a fully edited copy?</p>
+    <p>And how much would you pay for them to not send anyone anything and give you their only copy?</p>
+
+    <div class="inputs">
+      <label for="teamName3">Team/Name</label>
+      <input type="text" id="teamName3" maxlength="50">
+      <p class="char-hint">Enter up to 200 characters per COA.</p>
+      <label for="coa3a">CoA 1</label>
+      <textarea id="coa3a" maxlength="200" rows="3"></textarea>
+      <label for="coa3b">CoA 2</label>
+      <textarea id="coa3b" maxlength="200" rows="3"></textarea>
+      <label for="coa3c">CoA 3</label>
+      <textarea id="coa3c" maxlength="200" rows="3"></textarea>
+    </div>
+    <div class="actions"><button type="button" onclick="submitCOAs3()">Submit COAs</button></div>
+    <div id="results3" class="results"><h3>Submitted Responses</h3><p id="resName3"></p><ul id="resList3"></ul></div>
+  </section>
+</main>
+
+<footer>
+  <small>&copy; Air Power Fun Jungle Labs</small>
+</footer>
+
+<script src="js/nav.js"></script>
+
+<script>
+  function submitCOAs1(){
+    const name=document.getElementById("teamName1").value.trim();
+    const coa1=document.getElementById("coa1a").value.trim();
+    const coa2=document.getElementById("coa1b").value.trim();
+    const coa3=document.getElementById("coa1c").value.trim();
+    if(!name||!coa1||!coa2||!coa3){
+      alert("Please fill in your name and all three COAs before submitting.");
+      return;
+    }
+    document.getElementById("resName1").textContent="Name/Team: "+name;
+    const list=document.getElementById("resList1"); list.innerHTML="";
+    [coa1,coa2,coa3].forEach((c,i)=>{
+      const li=document.createElement("li");
+      li.textContent=`CoA ${i+1}: ${c}`;
+      list.appendChild(li);
+    });
+    document.getElementById("results1").style.display="block";
+  }
+
+  function submitCOAs2(){
+    const name=document.getElementById("teamName2").value.trim();
+    const coa1=document.getElementById("coa2a").value.trim();
+    const coa2=document.getElementById("coa2b").value.trim();
+    const coa3=document.getElementById("coa2c").value.trim();
+    if(!name||!coa1||!coa2||!coa3){
+      alert("Please fill in your name and all three COAs before submitting.");
+      return;
+    }
+    document.getElementById("resName2").textContent="Name/Team: "+name;
+    const list=document.getElementById("resList2"); list.innerHTML="";
+    [coa1,coa2,coa3].forEach((c,i)=>{
+      const li=document.createElement("li");
+      li.textContent=`CoA ${i+1}: ${c}`;
+      list.appendChild(li);
+    });
+    document.getElementById("results2").style.display="block";
+  }
+
+  function submitCOAs3(){
+    const name=document.getElementById("teamName3").value.trim();
+    const coa1=document.getElementById("coa3a").value.trim();
+    const coa2=document.getElementById("coa3b").value.trim();
+    const coa3=document.getElementById("coa3c").value.trim();
+    if(!name||!coa1||!coa2||!coa3){
+      alert("Please fill in your name and all three COAs before submitting.");
+      return;
+    }
+    document.getElementById("resName3").textContent="Name/Team: "+name;
+    const list=document.getElementById("resList3"); list.innerHTML="";
+    [coa1,coa2,coa3].forEach((c,i)=>{
+      const li=document.createElement("li");
+      li.textContent=`CoA ${i+1}: ${c}`;
+      list.appendChild(li);
+    });
+    document.getElementById("results3").style.display="block";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learning Styles Assessment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../sites.css">
+  <style>
+    main { padding:20px 28px; max-width:900px; margin:0 auto }
+    .hidden { display:none }
+    .row { margin:.75rem 0 }
+    .label { font-weight:bold; display:block; margin-bottom:.25rem }
+    input[type="text"] { width:100%; padding:.5rem; font-size:1rem }
+    .meta { color:#555; font-size:.9rem; margin:.5rem 0 }
+    .question { font-weight:bold; margin:.5rem 0 1rem }
+    .options { display:grid; grid-template-columns:1fr; gap:.6rem }
+    .options button { display:block; width:100%; padding:.6rem .9rem; text-align:left; cursor:pointer; border:1px solid #ccc; border-radius:6px; background:#fff }
+    .options button:hover { background:#f7f7f7 }
+    @media (max-width:768px){
+      main{padding:16px;max-width:100%;margin:0}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Air Power</h1>
+
+<!-- Hamburger trigger -->
+<nav class="hamburger-nav">
+  <a href="#menu" class="menu-icon">&#9776;</a>
+</nav>
+</header>
+
+<!-- Overlay Menu -->
+<nav id="menu">
+  <div class="inner">
+    <h2>Menu</h2>
+    <ul class="links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/youth/COAs.html">COA Scenarios</a></li>
+      <li><a href="/youth/Assessment.html">Assessment</a></li>
+      <li><a href="/youth/Learning and Thinking.html">Learning & Thinking</a></li>
+      <li><a href="/youth/Scenario Questions.html">Scenario Questions</a></li>
+    </ul>
+    <a href="#" class="close">Close</a>
+  </div>
+</nav>
+
+
+<main>
+  <section id="intro">
+    <p>Enter your name (English or Korean) and start the assessment.</p>
+    <label class="label" for="userName">Name / 이름</label>
+    <input id="userName" type="text" placeholder="e.g., Hana / 한나" autocomplete="name">
+    <div class="row">
+      <button class="start" id="startBtn" type="button">Start Assessment</button>
+    </div>
+  </section>
+
+  <section id="assessment" class="hidden">
+    <div class="meta"><span id="progress">Question 1/15</span></div>
+    <div id="question" class="question"></div>
+    <div id="options" class="options"></div>
+  </section>
+
+  <section id="result" class="hidden">
+    <h2>Assessment Results</h2>
+    <p id="resultName"></p>
+    <div id="resultText"></div>
+  </section>
+</main>
+
+<footer>
+  <small>&copy; Air Power Fun Jungle Labs</small>
+</footer>
+<script src="js/nav.js"></script>
+
+<script>
+  const questions = [
+    {question:"When learning something new, how do you prefer to take in information?", options:["Seeing pictures, diagrams, or written words","Listening to explanations or discussions","Doing hands-on activities","Reading step-by-step instructions"]},
+    {question:"When giving directions, you are more likely to…", options:["Draw a map or write them down","Explain verbally step by step","Walk the person through it","Send a pin or reference landmark"]},
+    {question:"In class, you remember things best when…", options:["You read or see them written","You hear them explained","You try them out yourself","You review them with a partner"]},
+    {question:"When you spell a word, you…", options:["Picture the word in your mind","Sound it out","Write it down to see if it looks right","Recall a mnemonic or rhyme"]},
+    {question:"When you meet someone new, you remember them by…", options:["Their face","Their name","The situation or what you did together","Their voice"]},
+    {question:"When solving a problem, you…", options:["Draw it out or visualize it","Talk it through","Try different approaches physically","Look up examples"]},
+    {question:"When you are concentrating, you…", options:["Prefer quiet and visual focus","Like to talk it out or hear explanations","Fidget or move around","Listen to background music"]},
+    {question:"When you study for a test, you…", options:["Make charts, diagrams, or notes","Read notes aloud or discuss with others","Practice by doing problems or activities","Use flashcards"]},
+    {question:"When you are trying to remember a phone number, you…", options:["Visualize the numbers","Repeat it aloud","Write it down","Associate it with a pattern"]},
+    {question:"When you are learning a new skill, you prefer…", options:["Watching someone demonstrate","Listening to instructions","Trying it yourself","Reading a manual"]},
+    {question:"When you read a story, you…", options:["See the story in pictures in your mind","Hear the characters’ voices","Imagine acting it out","Summarize the plot"]},
+    {question:"When you are bored, you…", options:["Doodle or watch something","Talk or listen to music","Move around or play with things","Daydream"]},
+    {question:"When you are trying to understand something, you…", options:["Look at pictures or charts","Ask someone to explain","Experiment with it","Read about it"]},
+    {question:"When you are telling a story, you…", options:["Describe what it looked like","Repeat what was said","Act it out with gestures","Summarize the key events"]},
+    {question:"When you are learning vocabulary, you…", options:["Write the words down","Say the words aloud","Use the words in a sentence or activity","Visualize the words in context"]}
+  ];
+
+  let current=0,answers=[],displayName="";
+  const intro=document.getElementById("intro"),startBtn=document.getElementById("startBtn"),nameInput=document.getElementById("userName"),
+        assessment=document.getElementById("assessment"),result=document.getElementById("result"),
+        questionEl=document.getElementById("question"),optionsEl=document.getElementById("options"),
+        progressEl=document.getElementById("progress"),resultNameEl=document.getElementById("resultName"),resultTextEl=document.getElementById("resultText");
+
+  startBtn.addEventListener("click",()=>{
+    const val=nameInput.value.trim();
+    if(!val){alert("Please enter your name / 이름을 입력해주세요.");nameInput.focus();return;}
+    displayName=val;
+    intro.classList.add("hidden");
+    assessment.classList.remove("hidden");
+    current=0;answers=[];showQuestion();
+  });
+
+  function showQuestion(){
+    progressEl.textContent=`Question ${current+1}/${questions.length}`;
+    const q=questions[current];
+    questionEl.textContent=q.question;
+    optionsEl.innerHTML="";
+    q.options.forEach((opt,i)=>{
+      const btn=document.createElement("button");
+      btn.type="button";btn.textContent=opt;
+      btn.addEventListener("click",()=>selectOption(i));
+      optionsEl.appendChild(btn);
+    });
+  }
+
+  function selectOption(choice){
+    answers.push(choice);
+    current++;
+    if(current<questions.length){showQuestion();}else{showResult();}
+  }
+
+  function showResult(){
+    assessment.classList.add("hidden");result.classList.remove("hidden");
+    resultNameEl.textContent=`Name: ${displayName}`;
+    const counts={Visual:0,Auditory:0,Kinesthetic:0,Reading:0};
+    answers.forEach(choice=>{
+      if(choice===0)counts.Visual++;
+      else if(choice===1)counts.Auditory++;
+      else if(choice===2)counts.Kinesthetic++;
+      else if(choice===3)counts.Reading++;
+    });
+    const sorted=Object.entries(counts).sort((a,b)=>b[1]-a[1]);
+    const top1=sorted[0][0],top2=sorted[1][0];
+    const narratives={
+      "Visual+Auditory":"You learn best when you combine images and sound.",
+      "Visual+Kinesthetic":"You learn best when you combine seeing and doing.",
+      "Visual+Reading":"You learn best when you combine charts and text.",
+      "Auditory+Kinesthetic":"You learn best when you combine listening and hands-on practice.",
+      "Auditory+Reading":"You learn best when you combine listening and reading.",
+      "Kinesthetic+Reading":"You learn best when you combine doing and reading."
+    };
+    const comboKey=[top1,top2].sort().join("+");
+    const narrative=narratives[comboKey]||"You learn best when you combine these traits.";
+    resultTextEl.innerHTML=`<h3>Your Learning Style Combo:</h3><p><strong>${top1.toUpperCase()} + ${top2.toUpperCase()}</strong></p><p>${narrative}</p>`;
+  }
+</script>
+
+</body>
+</html>
+    

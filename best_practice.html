@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Panel Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="sites.css">
+
+  <style>
+    main { padding:20px 28px; max-width:900px; margin:0 auto }
+    .hidden { display:none }
+
+    .panel-buttons { display:flex; gap:10px; margin-bottom:20px; }
+    .panel-btn { padding:8px 14px; font-size:14px; cursor:pointer; border:1px solid #444; background:#eee; }
+
+    .panel-wrapper { display:flex; gap:20px; }
+
+    /* ⭐ FIXED PANEL WIDTH + PADDING ⭐ */
+    .panel-content {
+      width: 85%;
+      padding-right: 24px;
+      padding-left: 10px;
+      box-sizing: border-box;
+      font-size:13px;
+      line-height:1.35;
+    }
+
+    @media (max-width:768px){
+      main{padding:16px;max-width:100%;margin:0}
+      .panel-wrapper{flex-direction:column}
+      .panel-content{width:100%}
+    }
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>Smart Money Decisions</h1>
+
+  <nav class="hamburger-nav">
+    <a href="#menu" class="menu-icon">&#9776;</a>
+  </nav>
+</header>
+
+<div id="menu-overlay"></div>
+
+<div id="menu">
+  <div class="inner">
+    <h2>Menu</h2>
+
+    <nav id="main-nav">
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fast-track.html">Fast Track Degree</a></li>
+        <li><a href="AF_Civilian_Careers.html">Civilian Internships & Careers</a></li>
+        <li><a href="best_practice.html">Smart Money Decisions</a></li>
+        <li><a href="rants.html">Rants</a></li>
+      </ul>
+    </nav>
+
+    <a href="#" class="close">Close</a>
+  </div>
+</div>
+
+<script>
+  const menuIcon = document.querySelector('.menu-icon');
+  const menu = document.getElementById('menu');
+  const overlay = document.getElementById('menu-overlay');
+  const closeBtn = document.querySelector('#menu .close');
+
+  menuIcon.onclick = e => {
+    e.preventDefault();
+    document.body.classList.add('is-menu-visible');
+  };
+
+  closeBtn.onclick = e => {
+    e.preventDefault();
+    document.body.classList.remove('is-menu-visible');
+  };
+
+  overlay.onclick = () => {
+    document.body.classList.remove('is-menu-visible');
+  };
+</script>
+
+<main>
+
+<section class="panel-page">
+
+  <div class="panel-buttons">
+    <button class="panel-btn btn-panel-1">Stop Getting Robbed</button>
+    <button class="panel-btn btn-panel-2">Change</button>
+  </div>
+
+  <div class="panel-wrapper">
+
+    <!-- ⭐ PANEL 1 ⭐ -->
+    <div class="panel-1 panel-content">
+      <h3>Preface</h3>
+      <p>If transitioning into college world / life was a sport, this content covers some fundamentals to assist you in becoming a competent to even a really good player. 
+        For example, you can make money (actually turn a profit) on college books instead of dropping dosh at a college campus bookstore like its a charity promising to solve world hunger. 
+You can also set yourself up now to save phat stacks of cash in the future on interest rates for major purchases like cars, houses, high-caliber home-defense weaponization, firetrucks - whatever you attach a high value to in life. 
+At a minimum, you will have your eyes at least half open (versus being blindsided) when it comes to understanding different types of student loans, knowing deep inside your dark little hearts 
+that "interest rates" means other stuff and not just vibing or playing eye tag.
+        </p>
+    <!-- English panel -->
+    <section id="panel-en" class="card" role="tabpanel" aria-labelledby="tab-en">
+      
+
+<style>
+  header {
+    text-align: center; /* centers the text horizontally */
+  }
+</style>
+
+
+
+
+
+
+<details>
+  <summary>College Books - Buying and Selling</summary>
+
+  <!-- ▼▼ YOUR INSERTED CONTENT GOES HERE ▼▼ -->
+  <div id="custom-content">
+    <!-- ENTER YOUR TEXT / HTML HERE -->
+    <p>Students can buy used or older edition books cheaply, then resell them for equal or higher value on platforms like BookScouter, eBay, Facebook Marketplace, etc. = 
+actual profit i.e., real cash</p>
+    <p>College campus bookstores often buy back at 10–30% of the original price - Online marketplaces often pay 50–90%</p>
+  </div>
+  <!-- ▲▲ END INSERTED CONTENT ▲▲ -->
+
+
+
+
+
+
+  <h3>Free & Library-Based Options</h3>
+  <ul>
+    <li>WorldCAT – Borrow textbooks through your local library; most colleges have rental agreements.<br>
+      <a href="https://search.worldcat.org" target="_blank">https://search.worldcat.org</a>
+    </li>
+    <li>Project Gutenberg – Free classics and public-domain texts.<br>
+      <a href="https://www.gutenberg.org" target="_blank">https://www.gutenberg.org</a>
+    </li>
+    <li>OpenStax – Free, peer-reviewed college-level textbooks.<br>
+      <a href="https://openstax.org" target="_blank">https://openstax.org</a>
+    </li>
+    <li>Internet Archive – Massive digital library with free textbook PDFs.<br>
+      <a href="https://archive.org" target="_blank">https://archive.org</a>
+    </li>
+    <li>LibreTexts – Open educational resources for STEM, humanities, and social sciences.<br>
+      <a href="https://libretexts.org" target="_blank">https://libretexts.org</a>
+    </li>
+  </ul>
+
+  <h3>Digital Textbooks, Rentals & Used Editions</h3>
+  <ul>
+    <li>Amazon Used Books – Filter by “Used” condition.<br>
+      <a href="https://www.amazon.com" target="_blank">https://www.amazon.com</a>
+    </li>
+    <li>ThriftBooks – Cheap used books, including textbooks.<br>
+      <a href="https://www.thriftbooks.com" target="_blank">https://www.thriftbooks.com</a>
+    </li>
+    <li>Facebook Marketplace – Local textbook deals.<br>
+      <a href="https://www.facebook.com/marketplace" target="_blank">https://www.facebook.com/marketplace</a>
+    </li>
+    <li>Chegg Books – Rent or buy textbooks, often up to 80% off.<br>
+      <a href="https://www.chegg.com/books" target="_blank">https://www.chegg.com/books</a>
+    </li>
+    <li>VitalSource – Digital textbooks & study tools.<br>
+      <a href="https://www.vitalsource.com" target="_blank">https://www.vitalsource.com</a>
+    </li>
+    <li>RedShelf – Affordable digital textbooks.<br>
+      <a href="https://www.redshelf.com" target="_blank">https://www.redshelf.com</a>
+    </li>
+    <li>Bookstores.com – Shopping site for buying books (part of TextbookRush).<br>
+      <a href="https://www.bookstores.com" target="_blank">https://www.bookstores.com</a>
+    </li>
+  </ul>
+
+  <h3>Price Comparison Engines (Find Lowest Price Fast)</h3>
+  <ul>
+    <li>WindsorBooks – Fast comparison across major sellers.<br>
+      <a href="https://www.windsorbooks.com" target="_blank">https://www.windsorbooks.com</a>
+    </li>
+    <li>CampusBooks – Huge comparison engine; up to 90% off used/rentals.<br>
+      <a href="https://www.campusbooks.com" target="_blank">https://www.campusbooks.com</a>
+    </li>
+    <li>DirectTextbook – Compares 200+ stores; includes coupons + cashback.<br>
+      <a href="https://www.directtextbook.com" target="_blank">https://www.directtextbook.com</a>
+    </li>
+    <li>CheapestTextbooks – Deep discounts; up to 95% off.<br>
+      <a href="https://www.cheapesttextbooks.com" target="_blank">https://www.cheapesttextbooks.com</a>
+    </li>
+    <li>BooksRun – Cheap used + rentals; eco-friendly; free shipping.<br>
+      <a href="https://booksrun.com" target="_blank">https://booksrun.com</a>
+    </li>
+    <li>ValoreBooks – Big rental marketplace; strong used inventory.<br>
+      <a href="https://www.valore.com" target="_blank">https://www.valore.com</a>
+    </li>
+    <li>BookScouter – Compare prices across sellers (buying + selling).<br>
+      <a href="https://bookscouter.com" target="_blank">https://bookscouter.com</a>
+    </li>
+  </ul>
+
+  <h3>Sell-Your-Books Platforms</h3>
+  <ul>
+    <li>TextbookRush – Large buyback marketplace; also rentals.<br>
+      <a href="https://www.textbookrush.com" target="_blank">https://www.textbookrush.com</a>
+    </li>
+    <li>BookScouter – Compares buyback prices across dozens of vendors.<br>
+      <a href="https://bookscouter.com" target="_blank">https://bookscouter.com</a>
+    </li>
+  </ul>
+</details>
+
+<details>
+        <summary>Credit & Debit Cards</summary>
+ <div style="font-size: 11px;">
+    <ul style="list-style: none;">
+      <ul style="list-style: none; margin-left: 20px;">
+<ul style="list-style: disc; margin-left: -20px;">
+  <li>Leverage credit and debit cards to maximize credit scores, budget smart, and never pay interest</li>
+  <li>Credit Cards (2 kinds)</li>
+</ul>
+
+<ul style="list-style: disc; margin-left: 20px; line-height: 1.2;">
+  <li>Student Credit Cards</li>
+  <li>Secured Credit Cards</li>
+</ul>
+
+<h3>My Recommendations</h3>
+<ul>
+  <li>Students get their own checking account/debit card under a parent’s account (joint, whatever) so the parent can transfer $$ if needed</li>
+  <li>Students get the Discover it® Student Cash Back card for the first year of college and use the cash-back rewards</li>
+  <li>Students set up debit card auto-payment(s) (scheduled around the 5th day of the month; charges can take 1-3 business days to fully post) to pay off the credit card balance after the recurring charges hit</li>
+  <li>Students set up credit card auto-payment(s) (scheduled around the 1st day of the month) on the credit card to pay all recurring bills like Netflix or whatever</li>
+  <li>Start with a student credit card or a secured card if you have no credit history</li>
+  <li>Use the card for predictable expenses (subscriptions, groceries, etc.)</li>
+  <li>Pay off the full balance each month to avoid interest</li>
+  <li>Set up autopay so you never miss a due date</li>
+  <li>Monitor your credit score with free tools like Credit Karma or your bank’s app</li>
+</ul>
+
+<h3>Why do these - what are the benefits:</h3>
+<ul>
+  <li>You have a backup if you lose one of your cards</li>
+  <li>You never pay credit card interest</li>
+  <li>Builds up your credit score (rating) - payment history & low credit utilization make up 35% and 30% of your credit score respectively</li>
+</ul>
+
+<h3>Why is credit score so important?</h3>
+<ul>
+  <li>Home Loans (Mortgages) 760+ gets a mortgage rate around 6.45%, 620 = up to 8.05%</li>
+  <li>Auto Loans 720+ can get under 5%, 600s = 10% or more</li>
+</ul>
+
+    <p>Bottomline; a credit score of 720+ versus 620 or lower will save you a few hundred thousand dollars on a 30 year home mortgage & will save you over $10k on a $60k car loan</p>
+
+    <h3>Student Credit Cards</h3>
+    <ul>
+      <li>Designed specifically for college students with little or no credit history</li>
+      <li>No security deposit required</li>
+      <li>Often come with no annual fee</li>
+      <li>May offer cash-back rewards and perks like bonuses for good grades</li>
+      <li>Require proof of college enrollment</li>
+      <li>You may need independent income or a co-signer if you're under 21</li>
+      <li>Great if you're a student with some income and want to start building credit while earning small rewards</li>
+    </ul>
+
+    <h4>Bank of Hawaii - Bankoh Student Credit Card</h4>
+    <ul>
+      <li>Local bank with branches across Hawaii</li>
+      <li>Fraud protection and mobile banking</li>
+      <li>Accessible online application and in-person support</li>
+    </ul>
+
+    <h4>Discover it® Student Cash Back</h4>
+    <ul>
+      <li>No annual fee, 5% cash back in rotating categories</li>
+      <li>Excellent access features & screen reader friendly app</li>
+      <li>Available to Hawaii residents nationwide</li>
+      <li>$20 statement credit each school year for good grades (GPA of 3.0 or higher) for up to 5 years</li>
+      <li>One-time bonus: end of your first year, Discover will match every dollar of cash back you earned</li>
+    </ul>
+
+    <h3>Secured Credit Cards</h3>
+    <ul>
+      <li>Ideal for anyone (student or not) who’s starting from scratch or rebuilding credit</li>
+      <li>Requires a refundable deposit (usually $200–$500) that becomes your credit limit</li>
+      <li>Easier to get approved for—even with no credit history</li>
+      <li>Doesn’t require student status</li>
+      <li>Can be upgraded to an unsecured card after responsible use</li>
+      <li>Perfect if you want a guaranteed way to start building credit and don’t mind putting down a deposit</li>
+    </ul>
+
+    <h4>American Savings Bank - Secured Credit Card</h4>
+    <ul>
+      <li>Hawaii-based bank with strong community ties</li>
+      <li>Requires refundable deposit ($300–$5,000)</li>
+      <li>Accessible customer service and in-branch support</li>
+    </ul>
+
+    <h4>Capital One - Secured Mastercard</h4>
+    <ul>
+      <li>Requires refundable deposit ($49–$200)</li>
+      <li>Credit tracking and upgrade path to unsecured card</li>
+      <li>Mobile app works well with accessibility tools</li>
+    </ul>
+
+    <h3>Which One’s Better?</h3>
+    <ul>
+      <li>If you're a student with income and want perks → go for a student card</li>
+      <li>If you're just starting out or don’t qualify for a student card → a secured card is a solid path</li>
+    </ul>
+      </details>
+
+      <details>
+<summary>Student Loans</summary>
+<!-- Words are Good -->
+<div style="font-size: 11px;">
+  <ul style="list-style: none;">
+    <ul style="list-style: none; margin-left: 5px;">
+      <li style="margin-left: -3px;"><strong>Direct Subsidized Loans (Undergraduate)</strong></li>
+      <ul style="list-style: disc; margin-left: 5px; line-height: 1.2;">
+        <li>Description: The government pays interest until you stop going to college</li>
+        <li>Interest Rate: 6.52%</li>
+        <li>Interest is paid by the government while you're in school at least half-time, during grace periods, and deferments</li>
+      </ul>
+    </ul>
+  </ul>
+</div>
+
+
+<div style="font-size: 11px;">
+  <ul style="list-style: none;">
+    <ul style="list-style: none; margin-left: 5px;">
+      <li style="margin-left: -3px;"><strong>Direct Unsubsidized Loans (Undergraduate)</strong></li>
+      <ul style="list-style: disc; margin-left: 5px; line-height: 1.2;">
+        <li>Description: You start paying interest immediately</li>
+        <li>Interest Rate: 6.52%</li>
+        <li>Interest accrues from the time the loan is disbursed - even while you're in school</li>
+      </ul>
+    </ul>
+  </ul>
+</div>
+
+<div style="font-size: 11px;">
+  <ul style="list-style: none;">
+    <ul style="list-style: none; margin-left: 5px;">
+      <li style="margin-left: -3px;"><strong>Direct Unsubsidized Loans (Graduate/Professional)</strong></li>
+      <ul style="list-style: disc; margin-left: 5px; line-height: 1.2;">
+        <li>Description: You start paying interest immediately</li>
+        <li>Interest Rate: 8.07%</li>
+        <li>No subsidized option for graduate students; interest accrues immediately</li>
+      </ul>
+    </ul>
+  </ul>
+</div>
+
+<div style="font-size: 11px;">
+  <ul style="list-style: none;">
+    <ul style="list-style: none; margin-left: 5px;">
+      <li style="margin-left: -3px;"><strong>Parent PLUS Loans</strong></li>
+      <ul style="list-style: disc; margin-left: 5px; line-height: 1.2;">
+        <li>Description: You start paying interest immediately</li>
+        <li>Interest Rate: 9.07%</li>
+        <li>Rates based on 10-Year Treasury Note yield from May 2025 + fixed margin; credit check required</li>
+      </ul>
+    </ul>
+  </ul>
+</div>
+
+<div style="font-size: 11px;">
+  <ul style="list-style: none;">
+    <ul style="list-style: none; margin-left: 5px;">
+      <li style="margin-left: -3px;"><strong>Grad PLUS Loans</strong></li>
+      <ul style="list-style: disc; margin-left: 5px; line-height: 1.2;">
+        <li>Description: You start paying interest immediately</li>
+        <li>Interest Rate: 9.07%</li>
+        <li>Rates based on 10-Year Treasury Note yield from May 2025 + fixed margin; credit check required</li>
+      </ul>
+    </ul>
+  </ul>
+</div>
+      </details>
+
+   <details>
+<summary>Establishing & Increasing Credit Score</summary>
+<!-- Words are Good -->
+<div style="font-size: 11px;">
+  <ul style="list-style: none;">
+    <ul style="list-style: none; margin-left: 5px;">
+      <li style="margin-left: -3px;"><strong>Credit Score - Credit Card to Debit Card or Bank Account Flow Strategy</strong></li>
+      <ul style="list-style: disc; margin-left: 5px; line-height: 1.2;">
+        <li>Step 1: Set up auto‑payments on your credit card for recurring bills e.g., Netflix, subscriptions, rent, insurance</li>
+        <li>Step 2: Let the charges hit, then wait 1–3 business days for each charge to fully post</li>
+        <li>Step 3: On day 4, pay off the credit card using a bank debit card or linked bank account</li>       
+        <li>Step 4: Before the end of the month, verify your bills were all paid and there were no problems or errors</li>
+
+
+
+      </ul>
+    </ul>
+  </ul>
+</div>
+
+
+<div style="font-size: 11px;"></div>Payment history on credit cards accounts for 35% of your FICO score and credit history length is also a major factor in your credit score
+<div style="font-size: 11px;"></div>Using a small amount of your credit limit (and paying it off monthly) keeps your utilization ratio low - another key score booster
+
+  
+ 
+        </section>
+      </details>
+      <!-- PUT ALL PANEL 1 CONTENT HERE -->
+    </div>
+
+    <!-- ⭐ READY CHG ⭐ -->
+    <div class="panel-2 panel-content hidden">
+      <h3>Preface</h3>
+      <p>Enter preface content here </p>
+   <!-- Korean panel -->
+       <section id="panel-en" class="card" role="tabpanel" aria-labelledby="tab-ko">
+      
+
+
+
+
+<style>
+  header {
+    text-align: center; /* centers the text horizontally */
+  }
+</style>
+
+
+
+
+
+
+      <details>
+        <summary>Chapter 1: </summary>
+        <p>content placeholder</p>
+ 
+<p>content placeholder</p>
+ 
+<p>content placeholder</p>
+
+      </details>
+
+      <details>
+        <summary>Chapter 2:</summary>
+        <p>content placeholder</p>
+
+<p>content placeholder</p>
+
+<p>content placeholder</p>
+ 
+<p>content placeholder</p>
+ 
+      </details>
+
+      <details>
+        <summary>Chapter 3:</summary>
+<p>content placeholder</p>
+
+<p>content placeholder</p>
+
+<p>content placeholder</p>
+
+<p>content placeholder</p>
+
+      </details>
+
+      <details>
+        <summary>Appendix:</summary>
+        <section id="resumes" class="card">
+          <h2>Large Red Font Placeholder</h2>
+          <article>
+         <h3>Smaller Red Font Placeholder </small></h3>
+<p>content placeholder</p>
+
+<h4>Header 1:</h4>
+    <ul>
+<li>line of content</li>
+<li>line of content</li>
+
+    </ul>
+<h4>Header 2:</h4>
+    <ul>
+<li>line of content</li>
+<li>line of content</li>
+
+    </ul>
+    <p><strong>Header 3:</strong> content placeholder</p>
+  </article>
+
+<article>
+    <h3>Smaller Red Font Placeholder</small></h3>
+<p>content placeholder</p>
+<h4>Header 1:</h4>
+    <ul>
+<li>line of content</li>
+<li>line of content</li>
+    </ul>
+<h4>Header 2:</h4>
+    <ul>
+<li>line of content</li>
+<li>line of content</li>  
+</ul>
+    <p><strong>Header 3:</strong> content placeholder</p>  </article>
+
+<article>
+    <h3>Smaller Red Font Placeholder</small></h3>
+<p>content placeholder</p>
+<h4>Header 1:</h4>
+    <ul>
+<li>line of content</li>
+<li>line of content</li>
+    </ul>
+<h4>Header 2:</h4>
+    <ul>
+<li>line of content</li>
+<li>line of content</li>  
+</ul>
+    <p><strong>Header 3:</strong> content placeholder</p>  </article>
+        </section>
+      <!-- PUT ALL PANEL 2 CONTENT HERE -->
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const btn1 = document.querySelector('.btn-panel-1');
+  const btn2 = document.querySelector('.btn-panel-2');
+  const panel1 = document.querySelector('.panel-1');
+  const panel2 = document.querySelector('.panel-2');
+
+  btn1.onclick = () => {
+    panel1.classList.remove('hidden');
+    panel2.classList.add('hidden');
+  };
+
+  btn2.onclick = () => {
+    panel2.classList.remove('hidden');
+    panel1.classList.add('hidden');
+  };
+</script>
+
+</main>
+
+</body>
+</html>

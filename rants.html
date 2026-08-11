@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Panel Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="sites.css">
+
+  <style>
+    main { padding:20px 28px; max-width:900px; margin:0 auto }
+    .hidden { display:none }
+
+    .panel-buttons { display:flex; gap:10px; margin-bottom:20px; }
+    .panel-btn { padding:8px 14px; font-size:14px; cursor:pointer; border:1px solid #444; background:#eee; }
+
+    .panel-wrapper { display:flex; gap:20px; }
+
+    /* ⭐ FIXED PANEL WIDTH + PADDING ⭐ */
+    .panel-content {
+      width: 85%;
+      padding-right: 24px;
+      padding-left: 10px;
+      box-sizing: border-box;
+      font-size:13px;
+      line-height:1.35;
+    }
+
+    @media (max-width:768px){
+      main{padding:16px;max-width:100%;margin:0}
+      .panel-wrapper{flex-direction:column}
+      .panel-content{width:100%}
+    }
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>New Panel Page</h1>
+
+  <nav class="hamburger-nav">
+    <a href="#menu" class="menu-icon">&#9776;</a>
+  </nav>
+</header>
+
+<div id="menu-overlay"></div>
+
+<div id="menu">
+  <div class="inner">
+    <h2>Menu</h2>
+
+    <nav id="main-nav">
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fast-track.html">Fast Track Degree</a></li>
+        <li><a href="AF_Civilian_Careers.html">Civilian Internships & Careers</a></li>
+        <li><a href="best_practice.html">Smart Money Decisions</a></li>
+        <li><a href="rants.html">Rants</a></li>
+      </ul>
+    </nav>
+
+    <a href="#" class="close">Close</a>
+  </div>
+</div>
+
+<script>
+  const menuIcon = document.querySelector('.menu-icon');
+  const menu = document.getElementById('menu');
+  const overlay = document.getElementById('menu-overlay');
+  const closeBtn = document.querySelector('#menu .close');
+
+  menuIcon.onclick = e => {
+    e.preventDefault();
+    document.body.classList.add('is-menu-visible');
+  };
+
+  closeBtn.onclick = e => {
+    e.preventDefault();
+    document.body.classList.remove('is-menu-visible');
+  };
+
+  overlay.onclick = () => {
+    document.body.classList.remove('is-menu-visible');
+  };
+</script>
+
+<main>
+
+<div class="media-links">
+  <h3>Media Files</h3>
+  <ul>
+    <li>
+      <a href="Media_Files/The_teenage_roast_of_a_spreadsheet_mentor.m4a" target="_blank">
+        roasted scotty (audio)
+      </a>
+    </li>
+
+    <li>
+      <a href="Media_Files/boxhead_MBA_under_$20k.mp4" target="_blank">
+        박스머리 MBA under $20k (video) 
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+<section class="panel-page">
+
+  <div class="panel-buttons">
+    <button class="panel-btn btn-panel-1">Roast</button>
+    <button class="panel-btn btn-panel-2">Vet</button>
+  </div>
+
+  <div class="panel-wrapper">
+
+    <!-- ⭐ PANEL 1 ⭐ -->
+    <div class="panel-1 panel-content">
+      <h3>Preface</h3>
+      <p>I'll preface the below with an apology. I decided to take a stab at humor. It's irreverent. I have a dark sense of humor, so in advance, if you find my words offensive, I'm sorry. Now please leave me alone. Have at least an average day ~ much love!</p>
+    <!-- English panel -->
+    <section id="panel-en" class="card" role="tabpanel" aria-labelledby="tab-en">
+      
+
+<style>
+  header {
+    text-align: center; /* centers the text horizontally */
+  }
+</style>
+
+
+
+
+
+
+      <details>
+        <summary>Chapter 1: Scotty Fillets ~ Roasted Scotty with special (very special) guests, Boothead & Boxhead</summary>
+        <p>Eleem: Abigail, babe, every time Scotty approaches me, my soul shoplifts a backpack and sprints for an exit. He’s got that aura of like he reads social queue’s with the skill of dying houseplants. Like he’s the supreme allied commander of an imaginary army of disoriented gnats on speed and he smells like mildewed wallpaper and disappointment. I bet he ate paint chips off the walls of his mobile home as a child. And I bet his mobile home was up on blocks because his mommy hocked their trailer tires at a pawn shop for beer money. It’s like he’s planted his flag and declared our church to be a goosepeople universe. Scotty’s such a douche-hole, He’s like, “You gonna take some CLEPs?” and I’m like, “Did you take a break from being obsessed with my future?” Touch grass, sir, sorry, I meant Toilet Face.</p>
+
+<p>Abigail: The freak-tard keeps saying I’m “wasting my potential.” I’m like, “Look bum-waffle, my potential packed its bags and left years ago. It’s living in a cabin in Montana under a fake identity, and it has more friends than you. My potential sends me postcards sometimes. “Wish you were here, but also… not really.” Meanwhile Scotty so Snotty’s out here acting like he’s the FBI’s Most Wanted for Academic Intervention. Bro-girl thinks he’s the Dean of Teenage Souls and eats swamp biscuits or something.</p>
+
+<p>Eleem: I’m like, Mayor-McFuture-Fart, keeps checking in like we’re gonna suddenly become motivated. And I’m all like, Scotty, you silly little Butt Dumpling, if motivation was a person, I’d file a restraining order. Mr. Fruity-licious sounds like he’s narrating a self-help audiobook nobody asked for. “Ladies, today is a great day to chase your dreams.” Sir Trash Panda, the only thing I’m chasing is the DoorDash driver because the freak forgot ketchup for my fries. Again.</p>
+
+<p>Abigail: No because SAME. Mr. Butt-Muppet’s all like, “You could finish a bachelor’s by 19 and not pay real money,” and I’m like, “Look, Sock vomit, I could finish 12 family sized bags of Hot Cheetos in one sitting, but here we are, Mr. twiddly-twat.” You’re so right, Mr. Sewer Pixie tells it like he’s narrating a B-movie documentary about wasted potential. “Here we see the modern teenager in her natural habitat: avoiding success like she owes it money.” I’m all like, “Look, Phlegm weasel, the only thing I’m finishing early is my lifespan because of stress from having to listen to your mental landfill of so-so ideas.”</p>
+
+<p>Eleem: Literally. Scotty, you giant flying hairdresser, we didn’t take CLEPs. We didn’t even take a shower. We roll on iced coffee, spite, and delusion, and well maybe the faint hope that the universe will take pity on us. Spoiler: it won’t, you bone-smuggling garden gnome. He’s like a persistently irritating walking pop-up ad that’s somehow immune to being closed with that motivational podcast voice, like he’s the CEO of Personal Growth for people with no arms or legs in an all black universe. I think his love language is bullying.</p>
+
+<p>Abigail: For real, I’m all like, “Scotty, sewer rat much?” You slithering dork-wagon, because that’s so attractive. He sent me a whole degree plan spreadsheet. The second I opened it I felt my soul leave my body like it was fleeing the scene of a car crash because I don’t have insurance - I don’t have a license either - and Oh crap, I forgot to learn how to drive, and then my soul started dying of boredom like it’s been banished to the shadow realm. Makes you sort of wonder if Scott-hole has the same effect on other life forms. Turd Burglar. The spreadsheet had tabs. TABS, Eleem. Color-coded like he’s planning a military mental meltdown operation. I clicked one and immediately felt myself prematurely aging, like I’m a 30-something now. Whenever I see him I swear I can hear the Windows XP shutdown sound somewhere off in the distance. Mr. Swamp Ferret’s the human version of a pop quiz - unwanted, stressful, and there’s never a good time for him. I dream of the snot gobbler getting vaporized like that cat one day.</p>
+
+<p>Eleem: I swear Scotty was the beta version of humanity. Like God was testing out the first draft and forgot to update him. And honestly, Abigail, sometimes I look at Scotty and I’m like… “How did this man survive the dinosaur age?” Like, did he just politely ask the T Rex to stop. Like “Hey T-Bone, respectfully request you refrain from eating me - I taste skunk butt Bro, so like, as if.” It’s like he still runs on Windows 95 brainware with a cracked motherboard and a soul held together by duct tape and expired coupons. His hair isn’t even cut, it’s carved, babe. Like he trims it with a broken spork he found in a dumpster behind a dying shopping mall. Every individual hair is standing there like, “I’ll die on this hill,” and they’re all making their last stand like the Battle of Hair mageddon.</p>
+
+<p>Abigail: STOP. Because he really does look like he’s fading in and out of existence, like the dizzy light of the morning when you’re hungover on life. Like he’s only 73% rendered at any given moment and his mind is stuck buffering at twenty percent. He’s a walking glitch in the Matrix. I wonder when he’ll start keeping his teeth in a cup at night? He’s the only guy I know who could get injured by thinking too hard - like if he tries to remember his password we’ll have to call 911 or a funeral home. His aura is so dusty I swear I get allergies when he walks by. He’s like a human air filter that hasn’t been changed since the revolutionary war.</p>
+
+<p>Eleem: No literally - I swear he totally did too much of everything in the 70s. Like his brain is now the size of a postage stamp, and the stamp is soiled in fake cat blood and expired sometime before the year 2000. It’s like Sasquatch ate his thoughts. And dude’s so old he farts dust - actually, his bum spouts dust clouds from the remains of our ancestors - an anatomical crop duster from hell.</p>
+
+<p>Abigail: I saw his phone once. 1,462 unread messages. All from his wife. All saying: “Yobo, where the F@#% are you.” Like she’s tracking a missing earring. He’s like a fossil that learned to walk upright. I bet archaeologists keep trying to carbon date him. He probably has a QR code on his back that links to a museum exhibit.</p>
+
+<p>Eleem: His driver’s license says: “Hair Color: Bald Eye Color: Fading Brainwaves: Incompatible with human experience.” Occupation: Professional Disappointment Emergency Contact: Regret.</p>
+
+<p>Abigail: He’s like if a midlife crisis put on cargo shorts and tried to give a TED Talk. “Ladies, education matters.” Okay, Grandpa Ronco 5000 Knees, then why does your aura smell like stale soup. Your vibe won’t be back in earth’s gravitational pull for another 17 trillion years, but you hang in there mister.</p>
+
+<p>Eleem: He walks like every joint in his body is negotiating a peace treaty. He breathes like a haunted accordion. He laughs like a dying lawnmower. He’s fun like tax forms. He has God’s anointing though, he’s been chosen for early bird specials and orthopedic shoes.</p>
+
+<p>Abigail: And yet he STILL has the audacity to ask, “Did you take your CLEPs today?” Sir, have you taken a vitamin since the Civil War? I heard he was there the day God made dirt - and that was before Adam. Later when he’s in the hospital eating out of a tube we can send vibes of regret through it and maybe put bugs in it. Centipedes? You know those guys that have haircuts that don’t go from front to back and that look like they were born sideways? I think Scotty’s inner voice has that haircut.</p>
+
+      </details>
+
+      <details>
+        <summary>Chapter 2: Almost a bio ~ Not a poem</summary>
+<p>almost a bio by scotty:</p>
+        <p>To put this in context - I was a 3‑sport, 7‑varsity‑letter jock with the academic discipline of a mildly distracted, hyper‑sensitive, jittery herd of feral golden retriever puppies tweaked out on a Popsicle‑and‑Pixy‑Stix bender. Void of actual, developed coping skills and aggressively book and homework‑averse, I coasted through four years of public high school without ever taking a book home. I “outsourced” homework (don’t ask), enjoyed a decidedly festive atmosphere, and treated after‑school hours as a series of real‑world clandestine operations - think “3:30-6:00 football practice → 7:00-11:37 kissing practice” — with my girlfriend and… never mind, all while maintaining a gently thuggish, aspiring part‑time heartbreaker demeanor. If I can pull off 30 hours of free college credit and bypass my entire freshman year of college just by applying what I already knew, imagine what a semi‑intelligent young person could do?</p>
+
+<p>not a poem by scotty:</p>
+<p>Born girl crazy, I fell hard and fast for pretty much every type of girl on earth. Tall ones, short ones, ones who could bench press me, and the kind that might slip under the table without their booster seat. I was an equal opportunity disaster — catching feelings for smiles, laughs, attitudes, and those feigned confidence, stolen hair moves that should’ve had a warning label. I remember one girl — she was so pretty God used the light of the sun’s reflection off the moon to make the stars shine off her smile. Forgot her name. It’s okay… she gives good memory.</p>
+
+      </details>
+
+      <details>
+        <summary>Chapter 3: Korean Christian Woman ~ A Day In The Life</summary>
+<!-- MORNING / HOME FLOW -->
+  <section class="segment segment-morning">
+    <h4>Morning: Barely Sanctified Mode</h4>
+    <ul>
+      <li>wakes up — before coffee = barely sanctified, operating at roughly <strong>27% holiness</strong></li>
+      <li>tries to pray — but mostly prays for more sleep and the energy to stay awake during devotional time</li>
+      <li>curses the food fairy for not magically having breakfast ready when she woke up</li>
+      <li>facilitates breakfast negotiations, employing early‑morning diplomacy while gently encouraging family members to remember “helping” is not optional</li>
+      <li>wakes teenager, rewakes teenager, threatens Wi‑Fi shutdown, <strong>executes Wi‑Fi shutdown</strong></li>
+      <li>discovers lost socks, feeds the flock, implements anger‑management techniques</li>
+      <li>remembers she’s Christian — repents for dawging the food fairy … but only a little</li>
+      <li>stares at her Bible, her coffee, and her to‑do list, contemplates which one will save her first</li>
+      <li>prioritizes laundry, dishes, bills and reflects on why it appears she’s the only one who knows where the trash can is</li>
+      <li>tenderly reminds her husband (not nagging, she promises) it’s “garbage day”</li>
+      <li>renders life‑saving coffee‑distribution support to her husband and pretends she didn’t notice her teenager stealing a sip like a tweaked‑out, tiny, caffeine‑rabid ferret</li>
+    </ul>
+  </section>
+
+  <!-- DRIVING / TRAFFIC -->
+  <section class="segment segment-traffic">
+    <h4>Traffic: Sanctification in Honolulu</h4>
+    <ul>
+      <li>practices forgiveness in Honolulu traffic where hope goes to die</li>
+      <li>resists the urge to render Old Testament justice on Tesla and Tacoma drivers who’ve never acknowledged the existence of blind‑spots</li>
+      <li>presents herself as a sinless, radiant, Proverbs‑31‑level saint to private‑school staff members</li>
+      <li>greets them with her best church voice and pretends she didn’t just repent four times on her way through the parking lot</li>
+      <li>victoriously speeds away from the school drop‑off lane, basking in the glory of having triumphantly risen above pre‑school spiritual warfare before 8 AM</li>
+      <li>prays for safety driving to work and invokes the sacred private‑school‑tuition‑increase prayer:
+        <q>PLEASE God, no more!!!</q>
+      </li>
+    </ul>
+  </section>
+
+  <!-- WORK HATS -->
+  <section class="segment segment-work">
+    <h3>Boss ~ Leader ~ Follower ~ Mentor ~ Counselor <span class="hat-count">(5 hats)</span></h3>
+
+    <ul>
+      <li>delegates tasks with confidence, authority, and a glimmer of hope that maybe one person will actually follow instructions</li>
+      <li>coaches adults who behave like toddlers with email access and no home training</li>
+      <li>manages enough workplace drama to make a middle‑school guidance counselor cry</li>
+      <li>feigns a firm grasp of what’s happening during meetings while quietly acknowledging she definitely should’ve prepared</li>
+      <li>ponders the definition of leadership; wonders if it’s just cleaning up messes she didn’t make</li>
+      <li>teeters on the edge of delirium as she endures her boss mansplaining the mundane in a tone widely considered condescending to a really dumb 4th grade boy who just licked a battery</li>
+      <li>experiences her soul quietly exiting her body as her boss waxes philosophical on items so basic a houseplant could understand</li>
+      <li>begs God for the spiritual discipline to not say what she’s thinking: to her boss, coworkers, husband, “friends,” or any other freak she might meet</li>
+      <li>smiles and bows politely as HR passes by but feels like a hostage trying to blink a duress signal in Morse code</li>
+      <li>retreats to the sanctuary of her desk, praying all conscious thought will dissolve into the emails she’s forgotten to send</li>
+      <li>joyfully praises our Creator God for another cup of coffee, secretly praying she won’t be escorted out of the building by security before it kicks in</li>
+    </ul>
+  </section>
+
+  <!-- HOME / CARE HATS -->
+  <section class="segment segment-home">
+    <h3>Chef ~ Nutritionist ~ Nurse ~ Financial Manager ~ Friend ~ Self‑Care Associate ~ Human <span class="hat-count">(7 hats)</span></h3>
+
+    <ul>
+      <li>plates meals like a Michelin‑star chef only to watch everyone opt out for cereal and Pop‑Tarts instead</li>
+      <li>angelically orbits girl‑world sporting the full armor of God, fending off fiery darts of gossip launched by a mean‑girl “friend” who smiles like a fellowship‑bestie but attacks like a slithering spiritual‑warfare reptile‑headed pit viper</li>
+      <li>diagnoses fevers, mystery rashes, and dramatic injuries that miraculously appear only at the mention of school</li>
+      <li>listens compassionately to her bestie’s rambling wonderments while heroically resisting the urge to say,
+        <q>girl… ummm, that’s your fault</q>
+      </li>
+      <li>grasps at self‑care by chugging three gulps of water, stretching once, and sitting down for 1.35 minutes before someone yells
+        <q>Oh‑ma (엄마)!</q>
+      </li>
+      <li>fondly recalls her days of simply being a human and not a 24‑hour crisis‑response center</li>
+      <li>then thanks God for grace, mercy, family, and caffeine</li>
+    </ul>
+  </section>
+
+  <!-- DISCIPLE / CHURCH HATS -->
+  <section class="segment segment-church">
+    <h3>Disciple of Christ ~ Church Volunteer <span class="hat-count">(2 hats)</span></h3>
+
+    <ul>
+      <li>strives to walk in the Spirit while her flesh is melting as she trots across the church parking lot, pegging her Korean trot‑ometer</li>
+      <li>attacks Scripture, prays, and repents for everything that happened during the “Employee/Driver/Mom” portions of her day</li>
+      <li>serves with joy while silently praying none of the youth are seriously injured and don’t break anything expensive</li>
+      <li>volunteers faithfully at church, showing up early, staying late, forgiving people who absolutely do not deserve it</li>
+      <li>remembers that sanctification is a group project and thanks God for using imperfect people, exactly like the idiot next to her, to do His perfect work</li>
+      <li>opens her Bible to Leviticus with holy intentions but suddenly realizes she can only interpret it as a divine reminder list of things she forgot to do today</li>
+    </ul>
+  </section>
+
+  <!-- END OF ROPE / OVERTHINKER HATS -->
+  <section class="segment segment-end-of-rope">
+    <h3>End of My Rope ~ Didn’t Sign Up for This ~ Professional Overthinker ~ Chaos Coordinator <span class="hat-count">(4 hats)</span></h3>
+
+    <ul>
+      <li>maintains a peaceful, serene, composed exterior while silently ignoring the peeling duct tape on her sanity</li>
+      <li>smiles confidently and nods affirmatively even though her brain is still buffering like a 2007 YouTube video</li>
+      <li>wearily accepts her fate with the resigned dignity of someone who knows God’s got jokes</li>
+      <li>conducts CIA‑level girl‑world analysis of body language, other women’s hair‑move telemetry, texts, emojis, punctuation, and the time it takes for text‑message replies</li>
+      <li>searches for hidden contextual meanings like she’s decoding enemy intelligence but doesn’t consider this overthinking</li>
+      <li>puts out fires she didn’t start, using tools she didn’t receive, for people who didn’t listen</li>
+      <li>organizes the unorganizable, plans the unplannable, yet accepts blame if things aren’t perfect</li>
+      <li>occasionally yells at someone else, which comes out like she’s narrating her own downfall while she’s too tired to breathe between thoughts</li>
+      <li>does not recall signing on to be her teenager’s emotional support animal, let alone the four horsemen of her internal apocalypse</li>
+      <li>lies awake at night solving problems that don’t exist yet — in thoughts that aren’t formed by words but tumbles of clauses</li>
+      <li>spirals between determination and stubbornness unlike a Rottweiler because eventually, a Rottweiler will let go</li>
+    </ul>
+  </section>
+      </details>
+
+      <details>
+        <summary>Appendix: Résumés</summary>
+        <section id="resumes" class="card">
+          <h2>The following resumes are provided for your convenience:</h2>
+          <article>
+         <h3>Trailer Biscuit (Biscuit 님) - aka. Boothead, Ick-leem McNastibottom. (Centipede Whisperer and break dance instructor) </small></h3>
+    <p>Born inside a malfunctioning vending machine at a karaoke bar beneath a Seoul subway station, Biscuit was raised by her mommy a retired hanbok designer and daddy a self-ordained Professor of Entomological Psychology at the east side Dew-Drop Inn University & Drive-Thru Pony Keg  who specialized in 무기 psychology. Her first word was “swiggly,” and her second was “back the truck up.” By age 5, she had already trademarked her own name and sued a textbook for being boring. Her first science fair project was a glitter volcano that purposely exploded into the principal’s koi pond. Biscuit frequently quotes David Lee Roth when late for church, stating "I don't feel tardy." Maintains a spotless record with the ASPCA for never having committed non-consensual euthanasia of infant felines (never shot a kitten).</p>
+    
+<h4>Other achievements include:</h4>
+    <ul>
+      <li>Passport forged in scented bold raised letter glitter and had to be replaced because she covered each page with stickers</li>
+<li>Pays extra at airports for excessive emotional baggage</li>
+<li>Always asks strangers for candy</li>
+<li>Saw Jesus in a vision and He said “I know you're wearing brand new Crocs, but step out of the boat anyway"</li>
+ <li>Converted expired creatine powder into drywall filler; the family living room now absorbs sound and judgment</li>
+      <li>Has tattoos of all 12 disciples and each of the 7 dwarfs</li>
+<li>Lauded by the business and marketing director for her business plan to operate bouncy houses shaped in the Ark of the Covenant</li>
+<li>Mispronounces her name during school attendance roll call</li>
+<li>LinkedIn profile has just three hearts on it and links to a playlist of breakup songs</li>
+<li>Own's nation's lone tambourine playing possum; current ska praise band world tour “Skathedral” a record sellout</li>
+<li>Awarded Runner-Up in Wife Beater Magazine’s America's Mobile Home Court Best Mag-Wheels Contest, style matters</li>
+    </ul>
+    <h4>Academic Highlights</h4>
+    <ul>
+<li>Majored in Emotional Detours with a minor in Uncommitted Relationships</li>
+      <li>Attempted to CLEP out of physics by submitting a drawing of a sad triangle</li>
+      <li>CLEP'd out of chemistry by submitting a TikTok video of her crying in a lab coat holding a dead kitten (not the one I shot)</li>
+      <li>Peaked during syllabus week</li>
+    </ul>
+    <p><strong>Yearbook Quote:</strong> "I do not fail; I redefine success in lowercase &amp; GPAs are a concept, not a number, okay Dill Tard"</p>
+  </article>
+
+<article>
+    <h3>Adgabrialle Mc-Mega-Melon<small> aka. Tater Nim 님 - Boxhead (The flying roach (무기) Whisperer)</small></h3>
+    <p>Add-Gah-Braille  was raised by her mother, a retired K-pop choreographer, who unfortunately, has two hairs that aren't perfect, and her father, a rogue Korean linguist that sports bulletproof hair gel and a PhD in forgotten emojis. By age 7 (before losing her baby teeth), she reverse-engineered the Periodic Table of Elements, and taught a really dumb, blind parrot to recite Hamlet in Binary. Her friend Biscuit's cat devoured the parrot. I shot the cat. The parrot’s final words were “2B or not 2B... 01110100” - because she taught it to speak both Binary and robot-friendly Hexadecimal. She's thought to have never put a kitten on blast.</p>
+    <h4>Other achievements include:</h4>
+    <ul>
+      <li>Has three passports, none match her accent</li>
+      <li>Summons lightning via karaoke</li>
+      <li>Banned from five international airports for “excessive flair”</li>
+ <li>Cast out demon's by accidentally playing a K-pop song backwards; rubbed red pepper paste in its eyes just for meanness</li>
+      <li>Won a spelling bee using an alphabet she invented (42 letters, zero regrets)</li>
+      <li>Led revival praise service in the church parking lot using a kazoo and a fog machine</li>
+      <li>Passed physics by submitting a vibe</li>
+      <li>Baptized her phone in a water bottle during a sermon on distractions</li>
+      <li>When Satan asked if she'd sell her soul she said, "How much Spam you got Bro?"</li>
+      <li>LinkedIn profile says “Don’t worry about it and please stop sweating me”</li>
+    </ul>
+    <h4>Academic Highlights</h4>
+    <ul>
+      <li>B.S. Degree in Quantum Sarcasm</li>
+      <li>Once CLEP’d out of 42 credits by submitting a haiku, a stolen hair move and a well-timed raised eyebrow</li>
+      <li>Revitalized her mom's unwanted hair care products as a Wi-Fi signal booster, all network devices in her entire zip code now live stream 8K UHD (7680×4320) video simultaneously</li>
+<li>Trend setter! Fasted from homework during Lent</li>
+  <li>Trained orphaned carp to achieve low-altitude gliding; her motto "I believe you can fly";  pending FAA approval</li>    
+<li>Wrote 57 page essay on “Why the Holy Spirit is probably left-handed”</li>
+<li>Finished with top grades in physics class; explained friction as God’s way of saying 'Chill' </li>
+ <li>Repurposed stolen Catholic communion wafers in a robotics competition as thermal shielding; won Best Innovation; accidentally sanctified the judges</li>   
+</ul>
+    <p><strong>Yearbook Quote:</strong> “I came. I saw. Left early and taught a really dumb blind parrot Hamlet. What can you do Sissy Fart?”</p>
+  </article>
+
+
+         <h3>Cleetus Q. Neckbone III Jr. <small>aka. President of the Jungle Stud Club (Former) - Dillweed (Spreadsheet Whisperer)</small></h3>
+    <p>Cleetus entered the world sideways and silent. Legend holds he was stillborn but revived by Tad - a giant flying yuppie hairdresser with a Latino name, frosted highlights, healing hands, and questionable licensing. Tad performed mouth-to-mouth resuscitation while quoting Leviticus and trimming Cleetus’s unruly hair into a respectable mullet. Raised by baby snakes in a socioeconomically challenged pocket of Cincinnati, where degenerate and recalcitrant youth expressed their endless potential through questionable graffiti and informal live-fire exercises, Cleetus grew into a record-setting three-sport athlete. His career ended abruptly when he tragically lost his knee in a shipwreck (or possibly during a chess team or leg wrestling tournament — the records remain unclear). He later met his wife at the Osan Air Base Exchange in South Korea, where she worked as a cashier and he was attempting to return a shoplifted rice cooker and a wounded ego. Their union was blessed by a malfunctioning receipt printer and three suspect witnesses. The happy ending here is that now she is his rice cooker.</p>
+    <h4>Other achievements include:</h4>
+    <ul>
+      <li>Would value friendships if he had one</li>
+      <li>Donated all his hair to a “Save the Clubbed Seals” charity that turned out to be a ska band</li>
+      <li>Kissed girls from 5 different continents spanning 13 countries, not all on the same night (all consensual, promise)</li>
+      <li>Dated the Columbian Ambassador to America's daughter, until he found out of course</li>
+      <li>Understands the impact of having a criminal record expunged; don't ask</li>
+      <li>Once arrested for “excessive charisma”</li>
+      <li>Can recite the Miranda rights in seven languages</li>
+      <li>Attempted tithing in Bitcoin and caused a minor theological crisis</li>
+    </ul>
+    <h4>Academic Highlights</h4>
+    <ul>
+      <li>Prone to pout in the corner during 4th grade art class, sketching pictures of flying roaches shooting cats, he was frequently scolded by the teacher for eating paste directly from the tube</li>
+      <li>Flunked out of semester 1 of college at age 18 with an abysmal 0.9 GPA, ha-ha</li>
+      <li>Earned 2 college degrees while paying zero dollars for tuition via Air Force Education programs: 4.0 GPAs, na-na, Air Power!</li>
+      <li>Has seven online research folders named FINAL_FINAL_FINAL - all different</li>
+      <li>Authored New York Times Best Seller “Now She’s My Rice Cooker: Finding God in the Customer Service Queue - A Shoplifter's Guide to Marrying a Korean”</li>
+    </ul>
+    <p><strong>Yearbook Quote:</strong> "I stand before you now because I can, but that usually doesn't last long".</p>
+  </article>
+        </section>
+      </details>
+      <!-- PUT ALL PANEL 1 CONTENT HERE -->
+    </div>
+
+    <!-- ⭐ Vet ⭐ -->
+    <div class="panel-2 panel-content hidden">
+      <h3>Preface</h3>
+      <p>I'll preface the below potential real-world scenario with an apology. I decided to take a stab at humor while providing a 
+        best-case scenario of a high school student achieving their dream without paying any money for college. 
+        It's irreverent. I have a dark sense of humor, so in advance, if you find my words offensive, 
+        I'm sorry. Now please leave me alone. Having spent several years on the beach, setting under a tree in a 
+        Zen-like hypnotic trance considering what I might title this story finally inspiration struck: I Talked to Some Girl at Church One Day </p>
+   <!-- Korean panel -->
+       <section id="panel-en" class="card" role="tabpanel" aria-labelledby="tab-ko">
+      
+
+
+
+
+<style>
+  header {
+    text-align: center; /* centers the text horizontally */
+  }
+</style>
+
+
+
+
+
+
+      <details>
+        <summary>Chapter 1: Ick-leem & Adgabraille (Boothead & Boxhead)</summary>
+        <p>Once upon a time there was a boy name Cleetus Neckbone. He's not important to this story. I didn't come here to talk about him. Cleetus has a little sister named Trailer Biscuit, Ick-leem McNastibottom, which in her native language translates to "mankind's friend, pilot of the future."  Biscuit has no arms or legs. Just kidding - she's fine. Occasionally she emits a scent similar to a Filipina’s feet, but it's ok, she's fine.</p>
+ 
+<p>Biscuit has a dream. She wants to grow up and be normal. While that's a stretch, anything is possible with God. She also wants to be a veterinarian.  She is apprehensive, as this requires many years of study. Then one day while walking to Moanalua High School, where she attends as a sophomore, she was run over by a bus. She wasn't even tipsy. It's ok, she's fine. But she is still a country girl. 
+One sunny day, she shared her dream with a really good-looking rich white guy from church, who happens to be a former firetruck. And he had also previously served as an overpaid volunteer youth worker and Bible teacher at the church. He told her she was stupid. Not really. He did notice that Biscuit has a difficult time doom scrolling on her phone because she was born with four thumbs and each one grew out upside down and backwards. This can happen.</p>
+ 
+<p>Anyway, the nice man, is also named Cleetus Neckbone. Shut up. Mr. Cleetus laid out a plan for her.  Biscuit enjoys school, if for no other reason than to catch up on sleep. Mr. Cleetus showed her how she could take six "Early College" courses offered by her high school and graduate with 18 college credits and never have to leave her high school campus to pull this off. Biscuit was all like "Shut up" and Cleetus was all like "You're not the boss of me stupid". Not really. Senator Cleetus also shared with Biscuit College Level Examination Program (CLEP) information, which is a nationally recognized system of exams that allows students to earn college credit for subjects they already know - without taking the actual college course. This is where things got complicated. Math is hard. Just ask Biscuit's bestie Trailer Tater (Tater 님) - aka Boxhead, Adgabraille McMegamelon who's name in her native language translates to "Goose-people". Not really. It does not translate but transliterates (via modulation techniques) to mean "Trixie Do-Wright inhabits Puffy Clouds near Her Home in the Sun". Or Trailer-Tater?</p>
+
+      </details>
+
+      <details>
+        <summary>Chapter 2: College Credits, CLEPs & Air Power</summary>
+        <p>Miraculously one morning as Biscuit was shuffling along en route to set her frenemie's apartment complex ablaze she was hit by a train. It's okay though - the train was undamaged. Due to the blunt force of the head trauma collision with the on-coming train (because trains are everywhere in Hawaii, you just cannot see them) suddenly she remembered that she could also CLEP out of six college classes and earn another 18 college credit hours. Tater  courageously volunteered to oversee the Astro physiological geometric symbiotic calculations required to determine that this would most likely eventuate in Biscuit acquiring a grand total of 36 college credit hours without ever stepping foot on a college campus or logging in to a stupid college website. Air Power! Which by the way, the term "Air Power" is widely understood within the United States Air Force Intelligence Community as being synonymous with a combinant of "Hallelujah" and "Amen" in Christianity. There's that. Don't forget. CLEPs are not free, in Hawaii they cost between $130 to $150 per exam. Again, we paged Tater  for mathematical advisement, and she was resolve in stating that the CLEPs would be from $780 to $900. At UH Mānoa, one 3-credit undergraduate class costs approximately $1,413 so it'd make financial sense to invest less than the cost of one course to not have to pay for six courses. I called a geography teacher at this point and requested to borrow a compass, because not only had I lost my way, but was so far ahead of schedule Biscuit's dome was beginning to take the form of an oblong peanut. Really. Tater also stated that in getting the 36 total hours via early study crap and CLEPs that Biscuit would save nearly $17,000. Hello?</p>
+
+<p>Then Biscuit threw bugs in Tater's hair. The word girl translates to vicious  and savage, depending on the mood. Or mean. Biscuit and Tater wanted to eat apples but there were spiders inside them.</p>
+
+<p>At this point, Biscuit turned her head in a complete 360 degree's and suddenly became all clingy and needy. Typical girl stuff actually. So Mr. Cleetus directed her not to worry in accordance with the Bible. That after getting 36 hours of credits, she should obviously enlist in the Air Force, Air Power, because it's a haven for women. Air Force women are treated with great reverence and typically granted an unlimited number of passes. Air Force men are known to be both protective and supportive of women in the Air Force and tend to strive to make their experience of life on earth as it will be in Heaven. It's that bad. Really. Of course, as with every society or subculture there is always an element of pig vomit people, and the Air Force does have a minority of puke patch people, uncool freaks. The difference here is that we take those men out back and shoot them. Kidding. Not only that, but Biscuit would earn additional college credits in her initial basic training, known as Air Force Holiday Camp, complete with biscuits and rattlesnake gravy for breakfast, and she will also get many college credits from attending technical school after basic training. She'll be saving money all this time because freedom is limited, but you're so busy it doesn't even matter. But there are other benefits besides always being treated princess-ishly. One, she'd get trained in a real job (yuk) and gain experience. She'll also meet loads of freaky people, Air Power! She could very conceivably get stationed in Hawaii or Korea after completing her technical school. During this time, the Air Force will provide her with $4,500 in tuition assistance annually, she can also continue to take CLEP and DSST exams on base for free (another Air Force benefit). Upon completion of her 4 year enlistment she will have completed an Associate Degree with the Community College of the Air Force (yes we have our own community college loser) and a Bachelor’s degree plus earned the Post 9/11 G.I. Bill benefit. She will also leave the Air Force with a network of friends and professional contacts that will be life-long in many cases. The G.I. Bill comes with both tuition and a housing allowance. She could return to live with her parents for free and let Mama-San get over $3,500 a month for rent from the V.A. Yes, this really happens. She will have completed her 4 year degree while she was in the Air Force and now can pursue a veterinarian degree. Meanwhile, her peers are chain smoking blunts and racking up debt from student loans, ha-ha.</p>
+ 
+<p>Also, during her 4 years as an active duty Airman (person, thingy, whatever), she will encounter well over 1,000 young people she would have never met otherwise. During this time she'll be presented with countless opportunities to share about her faith in Jesus Christ and educate a predominately unchurched population of young twenty-somethings, the majority of whom come from far less enviable circumstances than her loving Christian home. If by chance, these people are not influenced by her leadership and other soft skills she can throw filth on their haircuts. She'll feel better. She will also win awards for her performance and be honored with military decorations for outstanding service. I know this because this is the typical experience of classy young women in the Air Force. She may also separate from active duty with a Top Secret security clearance, I mean if I can do it. So she will have a significantly higher earning power than her stupid peers.</p>
+ 
+      </details>
+
+      <details>
+        <summary>Chapter 3: Service, Faith & Eating Bugs</summary>
+        <p>Upon returning home she will have a joyous reunion with her bestie Tater and drink excessively. Kidding. I would. But you are not me. They won't smoke crack, I wouldn't either. Eat bugs. At this point she has two tasty options. First, she can use her G.I. Bill benefit to cover her first year of medical school on island and rake in the housing allowance cash, living at home and enjoying the housing allowance money. Upon completion of year one of medical school, she can enter an Army program called the Health Professions Scholarship Program (HPSP). This hot little program provides full tuition coverage at accredited U.S. medical, dental, veterinary, optometry, or psychology schools for years 2 through 4, a signing bonus of up to $20,000, a monthly stipend (currently $2,999/monthly as of July 1, 2025), as well as covering all books, equipment, and fees. She will begin this process by becoming a commissioned Army officer as a Second Lieutenant (O-1) in the U.S. Army Reserve, this occurs at the beginning of the program. One trade-off for this program is she would have  45 days of Active Duty for Training (ADT) per year while in school, which is no major whoop because it's officer training schools and clinical rotations, or board study leave. The big deal here is she would have a three year active duty service commitment. She would have to be an officer in the Army and again, could be stationed in Korea or work on Tripler or Schofield Barracks. Note, she could go HPSP for all four years of veterinary school, I just wanted to demonstrate that her GI Bill benefit is an awesome option. She could also blow off the Army thing totally and use just her G.I. Bill. But the Army option is more interesting, so I won't stop talking about it.</p>
+
+        <p>I'm not chasing bunnies here, but I am going to redirect for two seconds to explain something critical. When you approach the subject of serving in the military with young people, especially teenagers with no exposure to the life, they enter a projection mode. They project their preconceived ideas, often referred to as " preconceived notions" whatever the crap a notion is. Fruity word, my take. The overwhelming majority of the time these projective type thoughts are total fallacy. Not even reality based. This is especially fitting in this situation. American's with no military experience, them cheese eating civilians, pretty much have no idea how chilled the medical communities within the military are. Stop for a second and shake your head - I think your brain is stuck. Consider for example, Tripler Army Hospital. What else is on that installation? Nothing military. Every other building is either for military housing, hospital support staff and there is a hotel and some places for old people to go die. You will not see military medical people hanging out with knuckle dragging Rambo wannabe freaks playing army. It don't happen because they are too valuable. So, Biscuit would hardly ever where a regular Army uniform. She'd sport doctor gear. Stupid lab coats. Only difference between military and civilian medical gear is the military nurses sport those unflattering pajama looking "scrub" thingy’s, that only come in real ugly colors, vice the smoking hot civilian nurse uniforms with the zip up miniskirts and white stockings (not that I noticed much) and the tweaked out stupid little hat - does anyone know what the stupid hat is for? Anyway, they have a totally different military experience and exist within their own little bubble. It may be a double standard, but it works for us. Please get out of my room.</p>
+
+        <p>When a veterinarian completes medical school in this program, they become a dual-degree professional - holding both a DVM (Doctor of Veterinary Medicine) and an MD (Doctor of Medicine). This opens up unique career paths in comparative medicine, research, public health, and interdisciplinary clinical roles. So she won't suck. If she opts to blow off this Army option, it's no big deal because she has the G.I. Bill and she could combine that with another variation of the Army program: The Health Professions Scholarship Program (HPSP) Clinical Internship, often referred to as HAP, which is a short-term summer training opportunity for medical students. This allows her to get paid military pay as a Second Lieutenant plus receive the monthly stipend while doing summer internships at Tripler Hospital and does not have any active duty service requirement tied to it, so she maintains her civilian scum status. Haha.  I wish everything sparkled. I like sparkly things, I bet you do too so get all up off my jock Bro.</p>
+
+        <p>So now that my mind's clarity has been a beacon in your fog of confusion I'm sure you can clearly see that Biscuit's life will become a daily mountain top experience well before she turns 30. It will be just her. Alone. On the mountain top. With a quart of Busch beer and an eagle. We'll only see her on holidays. Which is fine. A little is enough.</p>
+
+      </details>
+
+      <details>
+        <summary>Appendix: Résumés</summary>
+        <section id="resumes" class="card">
+          <h2>The following resumes are provided for your convenience:</h2>
+          <article>
+         <h3>Trailer Biscuit (Biscuit 님) - aka. Boothead, Ick-leem McNastibottom. (Centipede Whisperer and break dance instructor) </small></h3>
+    <p>Born inside a malfunctioning vending machine at a karaoke bar beneath a Seoul subway station, Biscuit was raised by her mommy a retired hanbok designer and daddy a self-ordained Professor of Entomological Psychology at the east side Dew-Drop Inn University & Drive-Thru Pony Keg  who specialized in 무기 psychology. Her first word was “swiggly,” and her second was “back the truck up.” By age 5, she had already trademarked her own name and sued a textbook for being boring. Her first science fair project was a glitter volcano that purposely exploded into the principal’s koi pond. Biscuit frequently quotes David Lee Roth when late for church, stating "I don't feel tardy." Maintains a spotless record with the ASPCA for never having committed non-consensual euthanasia of infant felines (never shot a kitten).</p>
+    
+<h4>Other achievements include:</h4>
+    <ul>
+      <li>Passport forged in scented bold raised letter glitter and had to be replaced because she covered each page with stickers</li>
+<li>Pays extra at airports for excessive emotional baggage</li>
+<li>Always asks strangers for candy</li>
+<li>Saw Jesus in a vision and He said “I know you're wearing brand new Crocs, but step out of the boat anyway"</li>
+ <li>Converted expired creatine powder into drywall filler; the family living room now absorbs sound and judgment</li>
+      <li>Has tattoos of all 12 disciples and each of the 7 dwarfs</li>
+<li>Lauded by the business and marketing director for her business plan to operate bouncy houses shaped in the Ark of the Covenant</li>
+<li>Mispronounces her name during school attendance roll call</li>
+<li>LinkedIn profile has just three hearts on it and links to a playlist of breakup songs</li>
+<li>Own's nation's lone tambourine playing possum; current ska praise band world tour “Skathedral” a record sellout</li>
+<li>Awarded Runner-Up in Wife Beater Magazine’s America's Mobile Home Court Best Mag-Wheels Contest, style matters</li>
+    </ul>
+    <h4>Academic Highlights</h4>
+    <ul>
+<li>Majored in Emotional Detours with a minor in Uncommitted Relationships</li>
+      <li>Attempted to CLEP out of physics by submitting a drawing of a sad triangle</li>
+      <li>CLEP'd out of chemistry by submitting a TikTok video of her crying in a lab coat holding a dead kitten (not the one I shot)</li>
+      <li>Peaked during syllabus week</li>
+    </ul>
+    <p><strong>Yearbook Quote:</strong> "I do not fail; I redefine success in lowercase &amp; GPAs are a concept, not a number, okay Dill Tard"</p>
+  </article>
+
+<article>
+    <h3>Adgabrialle Mc-Mega-Melon<small> aka. Tater Nim 님 - Boxhead (The flying roach (무기) Whisperer)</small></h3>
+    <p>Add-Gah-Braille  was raised by her mother, a retired K-pop choreographer, who unfortunately, has two hairs that aren't perfect, and her father, a rogue Korean linguist that sports bulletproof hair gel and a PhD in forgotten emojis. By age 7 (before losing her baby teeth), she reverse-engineered the Periodic Table of Elements, and taught a really dumb, blind parrot to recite Hamlet in Binary. Her friend Biscuit's cat devoured the parrot. I shot the cat. The parrot’s final words were “2B or not 2B... 01110100” - because she taught it to speak both Binary and robot-friendly Hexadecimal. She's thought to have never put a kitten on blast.</p>
+    <h4>Other achievements include:</h4>
+    <ul>
+      <li>Has three passports, none match her accent</li>
+      <li>Summons lightning via karaoke</li>
+      <li>Banned from five international airports for “excessive flair”</li>
+ <li>Cast out demon's by accidentally playing a K-pop song backwards; rubbed red pepper paste in its eyes just for meanness</li>
+      <li>Won a spelling bee using an alphabet she invented (42 letters, zero regrets)</li>
+      <li>Led revival praise service in the church parking lot using a kazoo and a fog machine</li>
+      <li>Passed physics by submitting a vibe</li>
+      <li>Baptized her phone in a water bottle during a sermon on distractions</li>
+      <li>When Satan asked if she'd sell her soul she said, "How much Spam you got Bro?"</li>
+      <li>LinkedIn profile says “Don’t worry about it and please stop sweating me”</li>
+    </ul>
+    <h4>Academic Highlights</h4>
+    <ul>
+      <li>B.S. Degree in Quantum Sarcasm</li>
+      <li>Once CLEP’d out of 42 credits by submitting a haiku, a stolen hair move and a well-timed raised eyebrow</li>
+      <li>Revitalized her mom's unwanted hair care products as a Wi-Fi signal booster, all network devices in her entire zip code now live stream 8K UHD (7680×4320) video simultaneously</li>
+<li>Trend setter! Fasted from homework during Lent</li>
+  <li>Trained orphaned carp to achieve low-altitude gliding; her motto "I believe you can fly";  pending FAA approval</li>    
+<li>Wrote 57 page essay on “Why the Holy Spirit is probably left-handed”</li>
+<li>Finished with top grades in physics class; explained friction as God’s way of saying 'Chill' </li>
+ <li>Repurposed stolen Catholic communion wafers in a robotics competition as thermal shielding; won Best Innovation; accidentally sanctified the judges</li>   
+</ul>
+    <p><strong>Yearbook Quote:</strong> “I came. I saw. Left early and taught a really dumb blind parrot Hamlet. What can you do Sissy Fart?”</p>
+  </article>
+
+
+         <h3>Cleetus Q. Neckbone III Jr. <small>aka. President of the Jungle Stud Club (Former) - Dillweed (Spreadsheet Whisperer)</small></h3>
+    <p>Cleetus entered the world sideways and silent. Legend holds he was stillborn but revived by Tad - a giant flying yuppie hairdresser with a Latino name, frosted highlights, healing hands, and questionable licensing. Tad performed mouth-to-mouth resuscitation while quoting Leviticus and trimming Cleetus’s unruly hair into a respectable mullet. Raised by baby snakes in a socioeconomically challenged pocket of Cincinnati, where degenerate and recalcitrant youth expressed their endless potential through questionable graffiti and informal live-fire exercises, Cleetus grew into a record-setting three-sport athlete. His career ended abruptly when he tragically lost his knee in a shipwreck (or possibly during a chess team or leg wrestling tournament — the records remain unclear). He later met his wife at the Osan Air Base Exchange in South Korea, where she worked as a cashier and he was attempting to return a shoplifted rice cooker and a wounded ego. Their union was blessed by a malfunctioning receipt printer and three suspect witnesses. The happy ending here is that now she is his rice cooker.</p>
+    <h4>Other achievements include:</h4>
+    <ul>
+      <li>Would value friendships if he had one</li>
+      <li>Donated all his hair to a “Save the Clubbed Seals” charity that turned out to be a ska band</li>
+      <li>Kissed girls from 5 different continents spanning 13 countries, not all on the same night (all consensual, promise)</li>
+      <li>Dated the Columbian Ambassador to America's daughter, until he found out of course</li>
+      <li>Understands the impact of having a criminal record expunged; don't ask</li>
+      <li>Once arrested for “excessive charisma”</li>
+      <li>Can recite the Miranda rights in seven languages</li>
+      <li>Attempted tithing in Bitcoin and caused a minor theological crisis</li>
+    </ul>
+    <h4>Academic Highlights</h4>
+    <ul>
+      <li>Prone to pout in the corner during 4th grade art class, sketching pictures of flying roaches shooting cats, he was frequently scolded by the teacher for eating paste directly from the tube</li>
+      <li>Flunked out of semester 1 of college at age 18 with an abysmal 0.9 GPA, ha-ha</li>
+      <li>Earned 2 college degrees while paying zero dollars for tuition via Air Force Education programs: 4.0 GPAs, na-na, Air Power!</li>
+      <li>Has seven online research folders named FINAL_FINAL_FINAL - all different</li>
+      <li>Authored New York Times Best Seller “Now She’s My Rice Cooker: Finding God in the Customer Service Queue - A Shoplifter's Guide to Marrying a Korean”</li>
+    </ul>
+    <p><strong>Yearbook Quote:</strong> "I stand before you now because I can, but that usually doesn't last long".</p>
+  </article>
+        </section>
+      <!-- PUT ALL PANEL 2 CONTENT HERE -->
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const btn1 = document.querySelector('.btn-panel-1');
+  const btn2 = document.querySelector('.btn-panel-2');
+  const panel1 = document.querySelector('.panel-1');
+  const panel2 = document.querySelector('.panel-2');
+
+  btn1.onclick = () => {
+    panel1.classList.remove('hidden');
+    panel2.classList.add('hidden');
+  };
+
+  btn2.onclick = () => {
+    panel2.classList.remove('hidden');
+    panel1.classList.add('hidden');
+  };
+</script>
+
+</main>
+
+</body>
+</html>

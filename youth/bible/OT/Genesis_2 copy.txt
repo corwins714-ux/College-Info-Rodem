@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="sites.css">
+  <style>
+    .details-content {
+      font-size: 0.8rem !important;
+      line-height: 1.3 !important;
+      margin-top: 0.5em !important;
+      padding: 0.5em 1em !important;
+      border: 1px solid #ccc !important;
+      border-radius: 6px !important;
+      background: #f9f9f9 !important;
+      white-space: normal !important;
+      overflow: auto !important;
+      max-height: none !important;
+    }
+    .details-content h5 {
+      margin: 0.25em 0 !important;
+      font-size: 0.85rem !important;
+    }
+    .details-content ul,
+    .details-content ol {
+      margin: 0 !important;
+      padding-left: 1.2em !important;
+    }
+    .details-content li {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .details-content p {
+      margin: 0 !important;
+      padding: 0 !important;
+      font-size: 0.8rem !important;
+      line-height: 1.3 !important;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <h1></h1>
+  <p></p>
+
+  <!-- Hamburger trigger -->
+  <nav class="hamburger-nav">
+    <a href="#menu" class="menu-icon"></a>
+  </nav>
+</header>
+
+<!-- Overlay Menu -->
+<nav id="menu">
+  <div class="inner">
+    <h2></h2>
+    <ul class="links">
+      <li><a href="index.html"></a></li>
+      <li><a href="Food.html"></a></li>
+      <li><a href="COAs.html"></a></li>
+      <li><a href="Assessment.html"></a></li>
+      <li><a href="Learning and Thinking.html"></a></li>
+      <li><a href="Scenario Questions.html"></a></li>
+    </ul>
+    <a href="#" class="close"></a>
+  </div>
+</nav>
+
+<div class="container">
+  <main>
+    <div class="panel-buttons">
+      <button onclick="showPanel('recipes')"></button>
+      <button onclick="showPanel('recommends')"></button>
+    </div>
+
+    <!-- Panel 1: Bible Study -->
+    <section id="recipes" class="panel active">
+      <div class="form-row">
+        <div class="form-label"></div>
+        <div class="info-box"></div>
+      </div>
+
+      <div class="form-row">
+        <button onclick="toggleDetails(this)" class="details-toggle">
+          Content / 내용 <span class="arrow"></span>
+        </button>
+<div class="content-section">
+
+  <h2></h2>
+
+  <p></p>
+
+  <p><strong></strong></p>
+  <p></p>
+  <p><strong></strong></p>
+
+  <h3></h3>
+  <p>
+    do you prefer being the type of person that mindlessly, thoughtlessly, unquestioningly, and quietly gives in to what the world has to offer you spiritually (which is nothing), giving no push back, saying “oh well, everyone does it, just let life happen”, and live a life of no thinking required? Btw, it’s easy to do.
+  </p>
+
+  <h3></h3>
+  <p>
+    your internal life becomes a spiritual rest stop bordering an emotional landfill and you eat bugs
+  </p>
+
+  <table class="comparison-table">
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>
+        peer pressure (to be “normal”) ~<br>
+        non Christian people’s expectations ~<br>
+        popular culture ~<br>
+        political correctness ~<br>
+        “woke” values ~<br>
+        acting like the world ~<br>
+        social media norms ~<br>
+        fear of being judged ~<br>
+        desire to fit in ~<br>
+        wanting approval ~
+      </td>
+      <td>
+        you let others define your identity<br>
+        you don’t pay attention to what shapes your thoughts/words/actions<br>
+        you try “go along ~ get along”<br>
+        you compromise your convictions<br>
+        you don’t guard your heart<br>
+        you don’t challenge the messages from authority figures/news/social media etc.<br>
+        you have an unfulfilling spiritual life and experience guilt &amp; shame<br>
+        you have a dull conscience and try to stop caring<br>
+        you are conscious of feeling empty inside<br>
+        you eat bugs
+      </td>
+    </tr>
+  </table>
+
+  <h2></h2>
+  <p>
+    Transform ~ to be changed from conformity to a renewing of your mind that impacts your thoughts, words and actions but studying and applying the Word of God in your life
+  </p>
+
+  <h2></h2>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+
+</div>
+
+
+      <!-- ========================= -->
+      <!-- !!! PLACEHOLDER: ADD NEW RECIPES HERE !!! -->
+      <!-- ========================= -->
+    </section>
+
+    <!-- Panel 2: Scenarios & Reconcile -->
+    <section id="Scenarios" class="panel">
+      <h3></h3>
+
+      <div class="form-row">
+        <div class="form-label"></div>
+        <div class="info-box"></div>
+      </div>
+
+      <div class="form-row">
+        <button onclick="toggleDetails(this)" class="details-toggle">
+          Details / 정보 보기 <span class="arrow"></span>
+        </button>
+        <div class="details-content">
+          <section class="scenario-block">
+
+  <header>
+    <h2></h2>
+    <p class="subtitle">
+      <em></em>
+    </p>
+    <p class="meta-snark">
+      <em></em>
+    </p>
+  </header>
+
+  <hr>
+
+  <!-- HATS / ROLES OVERVIEW -->
+  <section class="hats-overview">
+    <h3></h3>
+    <p class="hat-line">
+      <strong></strong>
+      <span class="hat-count"></span>
+    </p>
+  </section>
+
+  <!-- MORNING / HOME FLOW -->
+  <section class="segment segment-morning">
+    <h4></h4>
+    <ul>
+      <li><strong></strong></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li><strong></strong></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </section>
+
+  <!-- DRIVING / TRAFFIC -->
+  <section class="segment segment-traffic">
+    <h4></h4>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li>prays for safety driving to work and invokes the sacred private‑school‑tuition‑increase prayer:
+        <q></q>
+      </li>
+    </ul>
+  </section>
+
+  <!-- WORK HATS -->
+  <section class="segment segment-work">
+    <h3><span class="hat-count"></span></h3>
+
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </section>
+
+  <!-- HOME / CARE HATS -->
+  <section class="segment segment-home">
+    <h3><span class="hat-count"></span></h3>
+
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li>listens compassionately to her bestie’s rambling wonderments while heroically resisting the urge to say,
+        <q></q>
+      </li>
+      <li>grasps at self‑care by chugging three gulps of water, stretching once, and sitting down for 1.35 minutes before someone yells
+        <q></q>
+      </li>
+      <li></li>
+      <li></li>
+    </ul>
+  </section>
+
+  <!-- DISCIPLE / CHURCH HATS -->
+  <section class="segment segment-church">
+    <h3><span class="hat-count"></span></h3>
+
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </section>
+
+  <!-- END OF ROPE / OVERTHINKER HATS -->
+  <section class="segment segment-end-of-rope">
+    <h3><span class="hat-count"></span></h3>
+
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </section>
+
+</section>
+
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-label"></div>
+        <div class="info-box"></div>
+      </div>
+
+      <div class="form-row">
+        <button onclick="toggleDetails(this)" class="details-toggle">
+          Details / 세부사항 <span class="arrow"></span>
+        </button>
+        <div class="details-content">
+          <p><strong></strong><br>
+          City Square<br>
+          1286 Kalani Street, B102<br>
+          Honolulu, HI 96817</p>
+          <p></p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <small></small>
+</footer>
+
+<script src="js/nav.js"></script>
+
+<script>
+  function showPanel(panelId) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.getElementById(panelId).classList.add('active');
+  }
+
+  function toggleDetails(button) {
+    const content = button.nextElementSibling;
+    const arrow = button.querySelector(".arrow");
+    const isOpen = content.style.display === "block";
+
+    content.style.display = isOpen ? "none" : "block";
+    arrow.textContent = isOpen ? "▶" : "▼";
+  }
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("js/Recipes.json")
+    .then(res => {
+      if (!res.ok) throw new Error("Failed to load JSON");
+      return res.json();
+    })
+    .then(data => {
+      const recipe = data[0];
+      const details = document.getElementById("recipe-details");
+      if (!details || !recipe) return;
+
+      details.innerHTML = `
+        <h5></h5><p></p>
+        <h5></h5><p></p>
+        <h5></h5><p></p>
+        <h5></h5><p></p>
+        <h5></h5><p></p>
+        <h5></h5><p></p>
+        <h5></h5><p></p>
+        <h5></h5><p></p>
+
+        <h5></h5>
+        <ul><li></li></ul>
+
+        <h5></h5>
+        <ul><li></li></ul>
+
+        <h5></h5>
+        <ol><li></li></ol>
+
+        <h5></h5>
+        <ol><li></li></ol>
+
+        <h5></h5>
+        <ul><li></li></ul>
+      `;
+    })
+    .catch(err => console.error("Error loading recipe:", err));
+});
+</script>
+
+</body>
+</html>

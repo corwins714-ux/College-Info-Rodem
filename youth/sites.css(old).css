@@ -1,0 +1,521 @@
+/* Base styles */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Accent color */
+:root {
+  --accent-red: #b30000;
+}
+
+/* Header banner */
+header {
+  background: var(--accent-red);
+  color: #fff;
+  padding: 20px;
+}
+header h1 { margin: 0; font-size: 1.6rem; color: #fff; }
+header p { margin: 4px 0 0; font-size: 1rem; color: #fff; }
+
+/* Layout container */
+.container {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+/* Navigation */
+nav {
+  grid-column: 1;   /* lock nav to the left column */
+  position: sticky;
+  top: 0;
+  align-self: start;
+  background: #e0e0e0;
+  padding: 16px;
+  height: fit-content;
+}
+nav h2 { font-size: 1rem; margin-top: 0; color: var(--accent-red); }
+nav ul { list-style: none; padding: 0; margin: 0; }
+nav li { margin: 8px 0; }
+nav a {
+  text-decoration: none;
+  color: var(--accent-red);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+nav a:hover { text-decoration: underline; }
+
+/* Main content */
+main {
+  grid-column: 2;   /* lock main content to the right column */
+  padding: 20px 28px;
+}
+
+
+/* Headings in content */
+h1, h2, h3 { color: var(--accent-red); }
+header h1, header h2, header h3 { color: #fff; }
+
+/* Shrink page titles inside main */
+main h1 {
+  font-size: 1.4rem;
+}
+
+/* Blocks */
+.block {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* Inputs */
+.inputs { margin-top: 12px; }
+.inputs label {
+  font-weight: 600;
+  display: block;
+  margin: 10px 0 4px;
+}
+.inputs input[type="text"],
+.inputs textarea {
+  width: 100%;
+  max-width: 560px;
+  padding: 8px;
+}
+.char-hint { font-size: 0.9rem; color: #555; }
+
+/* Actions */
+.actions { margin-top: 12px; }
+.actions button {
+  background: var(--accent-red);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.actions button:hover { opacity: 0.9; }
+
+/* Results */
+.results {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fafafa;
+  display: none;
+}
+.results h3 { margin-top: 0; color: #333; }
+
+/* Panel buttons (Food page) */
+.panel-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.panel-buttons button {
+  background: #f5f5f5;
+  color: var(--accent-red);
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 6px;
+  font-weight: 600;
+}
+.panel-buttons button:hover {
+  background: #e0e0e0;
+}
+
+/* Panels */
+.panel {
+  display: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.25em 1em; /* tight vertical, restored horizontal padding */
+  background: #fff;
+}
+.panel.active {
+  display: block;
+}
+
+/* Footer */
+footer {
+  padding: 18px 22px;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #333;
+  grid-column: 1 / -1;
+}
+
+/* --- Mobile layout fix --- */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Panel 2: Recommends layout */
+.form-row {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 0.25em 0; /* minimal vertical gap */
+  gap: 12px;
+}
+
+.form-label {
+  color: var(--accent-red);
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.info-box {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.details-toggle {
+  background: #f5f5f5;
+  color: var(--accent-red);
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 0.25em 0.75em; /* compact but with horizontal padding */
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.details-toggle:hover {
+  background: #e0e0e0;
+}
+
+.details-content {
+  display: none;        /* hidden by default */
+  margin: 0.5em 0;      /* give it breathing room */
+  padding: 0.5em 1em;   /* balanced padding */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fafafa;
+  font-size: 0.85rem;   /* slightly larger for readability */
+  line-height: 1.5;     /* more line spacing for lists */
+  white-space: normal;  /* allow wrapping */
+  overflow: auto;       /* scroll if content is long */
+  max-height: none;     /* remove any height limit */
+}
+
+.details-content p,
+.details-content ul,
+.details-content ol {
+  margin: 0.5em 0;      /* consistent spacing for paragraphs and lists */
+}
+
+
+/* Recipe cards */
+.recipe-card {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 1em;
+  background: #fff;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.recipe-card h4 {
+  margin-top: 0;
+  color: var(--accent-red);
+}
+.recipe-card hr {
+  border: none;
+  border-top: 1px dashed #ccc;
+  margin: 0.5em 0;
+}
+.recipe-card .meta-block {
+  font-size: 0.8rem;   /* smaller font */
+  line-height: 1.2;    /* single spacing */
+}
+.recipe-card .meta-block p {
+  margin: 0;           /* no extra spacing */
+}
+.recipe-card .meta-block strong {
+  display: inline-block;
+  width: 140px;
+  color: #222;
+}
+
+/* --- NEW: tighten all recipe sections --- */
+.recipe-card h5 {
+  margin: 0;            /* no top/bottom margin */
+  font-size: 0.8rem;    /* match meta-block size */
+  font-weight: bold;
+  color: #444;
+}
+
+.recipe-card h5 + ul,
+.recipe-card h5 + ol {
+  margin-top: 0;        /* no gap between header and first item */
+}
+
+.recipe-card ul,
+.recipe-card ol {
+  font-size: 0.8rem;    /* match meta-block size */
+  line-height: 1.2;     /* single spacing */
+  margin: 0;            /* no extra top/bottom space */
+  padding-left: 1.2em;  /* keep bullets/numbers aligned */
+}
+
+.recipe-card li {
+  margin: 0.2em 0;      /* tight spacing between items */
+}
+/* === Hamburger Nav Polish === */
+.hamburger-nav {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.menu-icon:hover {
+  color: var(--accent-red);
+}
+
+/* Overlay menu */
+#menu {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+body.is-menu-visible #menu {
+  display: block;
+  opacity: 1;
+}
+
+#menu .inner {
+  text-align: center;
+  max-width: 400px;
+  margin: 10% auto;
+  padding: 2rem;
+  background: #222;
+  border-radius: 8px;
+  color: #fff;
+  animation: slideDown 0.3s ease;
+}
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+#menu h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+#menu .links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+#menu .links li {
+  margin: 1rem 0;
+}
+#menu .links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  padding: 0.5rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+#menu .links a:hover {
+  background: var(--accent-red);
+  color: #fff;
+  border-radius: 4px;
+}
+
+#menu .close {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+#menu .close:hover {
+  color: var(--accent-red);
+}
+/* === Scenario Questions single spacing === */
+main p {
+  margin: 0.25em 0;   /* tight vertical spacing */
+  line-height: 1.2;   /* single-ish line spacing */
+}
+.hamburger-nav {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+
+
+/* Container for the hamburger */
+.hamburger-nav .menu-icon {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    background-color: var(--accent-red) !important;
+    color: white !important;
+    font-size: 28px !important;
+    text-decoration: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+}
+.hamburger-nav .menu-icon:hover,
+.hamburger-nav .menu-icon:active,
+.hamburger-nav .menu-icon:visited,
+.hamburger-nav .menu-icon:focus {
+    background-color: var(--accent-red) !important;
+    color: white !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+@media (max-width: 768px) {
+  .hamburger-nav {
+    position: fixed !important;
+    top: 1rem !important;
+    right: 1.5rem !important;
+    left: auto !important;
+    z-index: 2000 !important;
+
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+/* Fix Youth hamburger menu alignment */
+#menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    padding: 40px 20px;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+    overflow-y: auto;
+    z-index: 9999;
+}
+
+#menu .inner {
+    margin-top: 20px;
+}
+
+#menu .links li a {
+    display: block;
+    padding: 12px 0;
+    font-size: 18px;
+}
+/* FORCE hamburger menu to stay right-aligned on mobile */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px !important;
+    }
+
+    #menu {
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        left: auto !important;
+        width: 280px !important;
+        height: 100vh !important;
+        background: #ffffff !important;
+        padding: 40px 20px !important;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.15) !important;
+        z-index: 9999 !important;
+    }
+
+    #menu .inner {
+        margin-top: 20px !important;
+    }
+
+    #menu .links li a {
+        display: block !important;
+        padding: 12px 0 !important;
+        font-size: 18px !important;
+    }
+
+    /* Normalize details/summary and list indentation */
+    details,
+    summary {
+        margin: 0;
+        padding: 0;
+    }
+
+    summary {
+      display: list-item;
+        cursor: pointer;
+    }
+
+    ul,
+    ol {
+        margin-left: 0 !important;
+        padding-left: 1rem !important;
+        list-style-position: inside !important;
+    }
+
+    ul li,
+    ol li {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    ul ul,
+    ol ol,
+    ul ol,
+    ol ul {
+        padding-left: 1rem !important;
+    }
+}
+@media (max-width: 768px) {
+  header {
+    text-align: left !important;
+    padding-left: 1rem !important;
+    padding-right: 0 !important;
+  }
+}
+}

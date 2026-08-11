@@ -1,0 +1,406 @@
+/* ============================================================
+   GLOBAL BASE
+   ============================================================ */
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+:root {
+  --accent-red: #b30000;
+}
+
+/* Header */
+header {
+  background: var(--accent-red);
+  color: #fff;
+  padding: 20px;
+}
+header h1 { margin: 0; font-size: 1.6rem; }
+header p { margin: 4px 0 0; font-size: 1rem; }
+
+/* Layout container */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;   /* hamburger-only layout */
+  min-height: 100vh;
+}
+
+/* Main content */
+main {
+  padding: 20px 28px;
+}
+
+h1, h2, h3 { color: var(--accent-red); }
+header h1, header h2, header h3 { color: #fff; }
+
+main h1 {
+  font-size: 1.4rem;
+}
+
+/* Blocks */
+.block {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* Inputs */
+.inputs { margin-top: 12px; }
+.inputs label {
+  font-weight: 600;
+  display: block;
+  margin: 10px 0 4px;
+}
+.inputs input[type="text"],
+.inputs textarea {
+  width: 100%;
+  max-width: 560px;
+  padding: 8px;
+}
+.char-hint { font-size: 0.9rem; color: #555; }
+
+/* Actions */
+.actions { margin-top: 12px; }
+.actions button {
+  background: var(--accent-red);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.actions button:hover { opacity: 0.9; }
+
+/* Results */
+.results {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fafafa;
+  display: none;
+}
+.results h3 { margin-top: 0; color: #333; }
+
+/* Footer */
+footer {
+  padding: 18px 22px;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* ============================================================
+   HAMBURGER MENU (ONLY NAV)
+   ============================================================ */
+
+.hamburger-nav {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 2000;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hamburger-nav .menu-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--accent-red);
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+}
+
+/* Overlay */
+#menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  z-index: 9990;
+  display: none;
+}
+body.is-menu-visible #menu-overlay {
+  display: block;
+}
+
+/* Slide-in panel */
+#menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  background: #fff;
+  padding: 40px 20px;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+  overflow-y: auto;
+  z-index: 9999;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+body.is-menu-visible #menu {
+  transform: translateX(0);
+}
+
+#menu .inner {
+  margin-top: 20px;
+}
+
+#menu h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: var(--accent-red);
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+#menu .links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+#menu .links li a {
+  display: block;
+  padding: 12px 0;
+  font-size: 18px;
+  color: var(--accent-red);
+  text-decoration: none;
+}
+#menu .links li a:hover {
+  color: #000;
+}
+
+/* Close button */
+#menu .close {
+  display: block;
+  margin-top: 2rem;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+#menu .close:hover {
+  color: var(--accent-red);
+}
+
+/* ============================================================
+   DETAILS / SUMMARY
+   ============================================================ */
+
+details summary {
+  color: var(--accent-red);
+  cursor: pointer;
+}
+
+details summary::-webkit-details-marker {
+  color: var(--accent-red);
+}
+
+.details-content {
+  display: none;
+  margin: 0.5em 0;
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fafafa;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  white-space: normal;
+  overflow: auto;
+}
+
+/* ============================================================
+   FORM ROWS / INFO BOXES
+   ============================================================ */
+
+.form-row {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 0.25em 0;
+  gap: 12px;
+}
+
+.form-label {
+  color: var(--accent-red);
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.info-box {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   PANELS
+   ============================================================ */
+
+.panel-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.panel-buttons button {
+  background: #f5f5f5;
+  color: var(--accent-red);
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 6px;
+  font-weight: 600;
+}
+.panel-buttons button:hover {
+  background: #e0e0e0;
+}
+
+.panel {
+  display: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.25em 1em;
+  background: #fff;
+}
+.panel.active {
+  display: block;
+}
+
+/* ============================================================
+   PHASE 2 / PHASE 3 FORMATTING
+   ============================================================ */
+
+#phase3-content {
+  font-size: 11px;
+  line-height: 1.15;
+}
+
+.phase3-item {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.phase3-item .line1 {
+  margin-left: -20px;
+  font-weight: bold;
+}
+.phase3-item .line2,
+.phase3-item .line3 {
+  margin-left: 14px;
+  margin-bottom: 2px;
+}
+.phase3-item span.label {
+  font-weight: bold;
+}
+
+/* Phase 2 forced match */
+#phase2-cbe-list .phase3-item {
+  margin-left: 20px !important;
+  margin-bottom: 26px !important;
+  font-size: 11px !important;
+  line-height: 1.15 !important;
+  font-family: inherit !important;
+}
+#phase2-cbe-list .line1 {
+  margin-left: -20px !important;
+  font-weight: bold !important;
+}
+#phase2-cbe-list .line2,
+#phase2-cbe-list .line3 {
+  margin-left: 14px !important;
+  margin-bottom: 2px !important;
+}
+#phase2-cbe-list .label {
+  font-weight: bold !important;
+}
+
+/* ============================================================
+   TABS
+   ============================================================ */
+
+.tabs .tab {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.tabs .tab.active {
+  background-color: darkred;
+}
+.tabs .tab:hover {
+  background-color: #aa0000;
+}
+
+/* ============================================================
+   MOBILE FIXES
+   ============================================================ */
+
+@media (max-width: 768px) {
+  header {
+    text-align: left !important;
+    padding-left: 1rem !important;
+    padding-right: 0 !important;
+  }
+
+  /* Normalize details/summary and list indentation */
+  details, summary {
+    margin: 0;
+    padding: 0;
+  }
+
+  summary {
+    display: list-item;
+  }
+
+  ul, ol {
+    margin-left: 0 !important;
+    padding-left: 1rem !important;
+    list-style-position: inside !important;
+  }
+
+  ul li, ol li {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+.media-links {
+  margin-bottom: 20px;
+  font-size: 12px;   /* ⭐ half-size links */
+}
+
+.media-links h3 {
+  color: var(--accent-red);
+  margin-bottom: 6px;
+  font-size: 10px;  /* slightly bigger than the links */
+}
+
+.media-links a {
+  color: var(--accent-red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.media-links a:hover {
+  text-decoration: underline;
+}

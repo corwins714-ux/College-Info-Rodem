@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../bible.css">
+  <link rel="stylesheet" href="../sites.css">
+</head>
+
+<body>
+<header>
+  <h1></h1>
+  <p></p>
+
+  <!-- Hamburger trigger -->
+  <nav class="hamburger-nav">
+    <a href="#menu" class="menu-icon"></a>
+  </nav>
+</header>
+
+<!-- Overlay Menu -->
+<nav id="menu">
+  <div class="inner">
+    <h2></h2>
+    <ul class="links">
+      <li><a href="../index.html"></a></li>
+      <li><a href="../Food.html"></a></li>
+      <li><a href="../COAs.html"></a></li>
+      <li><a href="../Assessment.html"></a></li>
+      <li><a href="../Learning and Thinking.html"></a></li>
+      <li><a href="../Scenario Questions.html"></a></li>
+      <li><a href="index.html"></a></li>
+    </ul>
+    <a href="#" class="close"></a>
+  </div>
+</nav>
+
+<main class="bible-layout">
+
+  <!-- LEFT PANEL: STUDY CONTENT -->
+  <section class="study-panel">
+    <h2></h2>
+    <p class="reference"></p>
+
+    <div class="study-content">
+      <p></p>
+
+      <p></p>
+
+      <h3></h3>
+      <p></p>
+    </div>
+  </section>
+
+  <!-- RIGHT PANEL: TABS -->
+  <section class="side-panel">
+
+    <!-- TAB BUTTONS -->
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="scenarios"></button>
+      <button class="tab-btn" data-tab="recon"></button>
+    </div>
+
+    <!-- TAB CONTENT: SCENARIOS -->
+    <div id="scenarios" class="tab-content active">
+      <h3></h3>
+      <p></p>
+    </div>
+
+    <!-- TAB CONTENT: RECONCILIATIONS -->
+    <div id="recon" class="tab-content">
+      <h3></h3>
+      <p></p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <small></small>
+</footer>
+
+<script src="../js/nav.js"></script>
+
+<!-- Bible tab logic -->
+<script>
+  const buttons = document.querySelectorAll('.tab-btn');
+  const tabs = document.querySelectorAll('.tab-content');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      tabs.forEach(t => t.classList.remove('active'));
+
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
